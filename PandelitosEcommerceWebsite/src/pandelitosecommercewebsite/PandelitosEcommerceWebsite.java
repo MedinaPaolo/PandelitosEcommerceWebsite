@@ -16,7 +16,7 @@ public class PandelitosEcommerceWebsite
      */
     public static void main(String[] args)
     {
-        LoginPage p = new LoginPage();
+        LogInPage p = new LogInPage();
         PaymentPage pm = new PaymentPage();
         PaymentMethodCard pmc = new PaymentMethodCard();
         ConfirmationPage c = new ConfirmationPage();
