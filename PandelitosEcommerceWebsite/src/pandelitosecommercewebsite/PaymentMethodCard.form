@@ -23,71 +23,93 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="expDateField" min="-2" pref="188" max="-2" attributes="0"/>
-                                  <Component id="expDateLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="expDateLabel" min="-2" pref="130" max="-2" attributes="0"/>
+                                  <Component id="dateNeedsToBeValidLabel" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="cvcLabel" min="-2" max="-2" attributes="0"/>
                                   <Component id="cvcField" min="-2" pref="188" max="-2" attributes="0"/>
+                                  <Component id="cvcNeedsToBeLettersLabel" alignment="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="cardholderNameLabel" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="97" max="32767" attributes="0"/>
-                                  </Group>
-                                  <Component id="cardholderNameField" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="cardholderNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cardholderNameField" min="-2" pref="188" max="-2" attributes="0"/>
+                                  <Component id="chNeedsToBeLetterLabel" max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <Component id="cardNumber" min="-2" pref="600" max="-2" attributes="0"/>
-                          <Component id="enterDetailsLabel" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="cardNumberLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cardNumberField" min="-2" pref="600" max="-2" attributes="0"/>
+                                  <Component id="enterDetailsLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cnNeedsToBeNumberLabel" alignment="0" min="-2" pref="188" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="379" max="-2" attributes="0"/>
-                      <Component id="confirmButton" min="-2" pref="84" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="379" max="-2" attributes="0"/>
-                      <Component id="backButton" min="-2" pref="84" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="378" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="confirmButton" pref="84" max="32767" attributes="0"/>
+                          <Component id="backButton" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="133" max="32767" attributes="0"/>
+              <EmptySpace pref="134" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="149" max="-2" attributes="0"/>
-              <Component id="enterDetailsLabel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="cardNumber" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="expDateLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="cvcLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="cardholderNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace pref="124" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="enterDetailsLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="cardNumberLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                      <Component id="cardNumberField" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="cnNeedsToBeNumberLabel" min="-2" pref="15" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="expDateLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cvcLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cardholderNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="cardholderNameField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cvcField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="expDateField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="cvcNeedsToBeLettersLabel" min="-2" pref="15" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="chNeedsToBeLetterLabel" min="-2" pref="15" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="dateNeedsToBeValidLabel" alignment="1" min="-2" pref="15" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="cardholderNameField" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="cvcField" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="expDateField" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
               <Component id="confirmButton" min="-2" pref="32" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="backButton" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="89" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -101,17 +123,17 @@
         <Property name="text" type="java.lang.String" value="Enter Card Details"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="cardNumber">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Bank Card Number"/>
-      </Properties>
+    <Component class="javax.swing.JTextField" name="cardNumberField">
+      <Events>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cardNumberFieldKeyPressed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="expDateLabel">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="10" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Expiration Date"/>
+        <Property name="text" type="java.lang.String" value="Expiration Date (MM/YY)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="cvcLabel">
@@ -119,7 +141,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="10" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="CVV/CVC"/>
+        <Property name="text" type="java.lang.String" value="CVV/CVC (3 or 4-digit number)"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="cardholderNameLabel">
@@ -130,32 +152,84 @@
         <Property name="text" type="java.lang.String" value="Cardholder&apos;s Name"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="expDateField">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="MM/YY"/>
-      </Properties>
+    <Component class="javax.swing.JTextField" name="cvcField">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="expDateFieldActionPerformed"/>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cvcFieldKeyTyped"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="cvcField">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="3 or 4-digit number"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JTextField" name="cardholderNameField">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Name"/>
-      </Properties>
+      <Events>
+        <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cardholderNameFieldKeyPressed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="confirmButton">
       <Properties>
         <Property name="text" type="java.lang.String" value="Confirm"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="confirmButtonActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="backButton">
+    <Component class="java.awt.Button" name="backButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Back"/>
+        <Property name="label" type="java.lang.String" value="back"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cardNumberLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="10" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Bank Card Number"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cnNeedsToBeNumberLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="10" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="cvcNeedsToBeLettersLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="10" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" red="ff" type="rgb"/>
+        </Property>
+        <Property name="inheritsPopupMenu" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="expDateField">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="expDateFieldKeyTyped"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="dateNeedsToBeValidLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="10" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="chNeedsToBeLetterLabel">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Segoe UI" size="10" style="0"/>
+        </Property>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="0" green="0" red="ff" type="rgb"/>
+        </Property>
       </Properties>
     </Component>
   </SubComponents>

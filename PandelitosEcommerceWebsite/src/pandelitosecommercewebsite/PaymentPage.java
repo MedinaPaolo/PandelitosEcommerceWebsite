@@ -15,6 +15,7 @@ public class PaymentPage extends javax.swing.JFrame {
      */
     public PaymentPage() {
         initComponents();
+        setTitle("Payment Methods");
     }
 
     /**
@@ -30,10 +31,12 @@ public class PaymentPage extends javax.swing.JFrame {
         selectMethodLabel = new javax.swing.JLabel();
         codCheckBox = new javax.swing.JCheckBox();
         cardCheckBox = new javax.swing.JCheckBox();
-        backButton = new javax.swing.JButton();
+        proceedButton = new javax.swing.JButton();
+        backButton = new java.awt.Button();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        selectMethodLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         selectMethodLabel.setText("Select payment method:");
 
         buttonGroup1.add(codCheckBox);
@@ -42,7 +45,19 @@ public class PaymentPage extends javax.swing.JFrame {
         buttonGroup1.add(cardCheckBox);
         cardCheckBox.setText("Card");
 
-        backButton.setText("Back");
+        proceedButton.setText("Proceed");
+        proceedButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                proceedButtonActionPerformed(evt);
+            }
+        });
+
+        backButton.setLabel("back");
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -51,12 +66,14 @@ public class PaymentPage extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(115, 115, 115)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(backButton)
                     .addComponent(cardCheckBox, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(selectMethodLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
-                        .addComponent(codCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(468, Short.MAX_VALUE))
+                        .addComponent(selectMethodLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(codCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(backButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(proceedButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(408, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -67,13 +84,41 @@ public class PaymentPage extends javax.swing.JFrame {
                 .addComponent(codCheckBox)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cardCheckBox)
-                .addGap(48, 48, 48)
-                .addComponent(backButton)
-                .addContainerGap(242, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addComponent(proceedButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(217, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void proceedButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_proceedButtonActionPerformed
+        // TODO add your handling code here:
+        boolean codCheckBoxSelected, cardCheckBoxSelected;
+        
+        codCheckBoxSelected = codCheckBox.isSelected();
+        cardCheckBoxSelected = cardCheckBox.isSelected();
+        
+        if (codCheckBoxSelected && !cardCheckBoxSelected) {
+            System.out.println("Transaction Completed!");
+            this.setVisible(false);
+            new ConfirmationPage().setVisible(true);
+        } else if (cardCheckBoxSelected && !codCheckBoxSelected) {
+            this.setVisible(false);
+            new PaymentMethodCard().setVisible(true);
+        } else if (!cardCheckBoxSelected && !codCheckBoxSelected){
+            javax.swing.JFrame f =  new javax.swing.JFrame();
+            javax.swing.JOptionPane.showMessageDialog(f,"Must select a payment option before proceeding.");
+        }
+    }//GEN-LAST:event_proceedButtonActionPerformed
+
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        // waiting for delivery address page
+    }//GEN-LAST:event_backButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -111,10 +156,11 @@ public class PaymentPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backButton;
+    private java.awt.Button backButton;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JCheckBox cardCheckBox;
     private javax.swing.JCheckBox codCheckBox;
+    private javax.swing.JButton proceedButton;
     private javax.swing.JLabel selectMethodLabel;
     // End of variables declaration//GEN-END:variables
 }

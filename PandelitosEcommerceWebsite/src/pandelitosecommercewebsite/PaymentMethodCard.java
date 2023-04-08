@@ -4,6 +4,7 @@
  */
 package pandelitosecommercewebsite;
 
+import java.awt.event.KeyEvent;
 /**
  *
  * @author Noah Peñaranda
@@ -15,6 +16,7 @@ public class PaymentMethodCard extends javax.swing.JFrame {
      */
     public PaymentMethodCard() {
         initComponents();
+        setTitle("Paying with Card");
     }
 
     /**
@@ -27,46 +29,88 @@ public class PaymentMethodCard extends javax.swing.JFrame {
     private void initComponents() {
 
         enterDetailsLabel = new javax.swing.JLabel();
-        cardNumber = new javax.swing.JTextField();
+        cardNumberField = new javax.swing.JTextField();
         expDateLabel = new javax.swing.JLabel();
         cvcLabel = new javax.swing.JLabel();
         cardholderNameLabel = new javax.swing.JLabel();
-        expDateField = new javax.swing.JTextField();
         cvcField = new javax.swing.JTextField();
         cardholderNameField = new javax.swing.JTextField();
         confirmButton = new javax.swing.JButton();
-        backButton = new javax.swing.JButton();
+        backButton = new java.awt.Button();
+        cardNumberLabel = new javax.swing.JLabel();
+        cnNeedsToBeNumberLabel = new javax.swing.JLabel();
+        cvcNeedsToBeLettersLabel = new javax.swing.JLabel();
+        expDateField = new javax.swing.JFormattedTextField();
+        dateNeedsToBeValidLabel = new javax.swing.JLabel();
+        chNeedsToBeLetterLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         enterDetailsLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         enterDetailsLabel.setText("Enter Card Details");
 
-        cardNumber.setText("Bank Card Number");
+        cardNumberField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                cardNumberFieldKeyPressed(evt);
+            }
+        });
 
         expDateLabel.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        expDateLabel.setText("Expiration Date");
+        expDateLabel.setText("Expiration Date (MM/YY)");
 
         cvcLabel.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        cvcLabel.setText("CVV/CVC");
+        cvcLabel.setText("CVV/CVC (3 or 4-digit number)");
 
         cardholderNameLabel.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         cardholderNameLabel.setText("Cardholder's Name");
 
-        expDateField.setText("MM/YY");
-        expDateField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                expDateFieldActionPerformed(evt);
+        cvcField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                cvcFieldKeyTyped(evt);
             }
         });
 
-        cvcField.setText("3 or 4-digit number");
-
-        cardholderNameField.setText("Name");
+        cardholderNameField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                cardholderNameFieldKeyPressed(evt);
+            }
+        });
 
         confirmButton.setText("Confirm");
+        confirmButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                confirmButtonActionPerformed(evt);
+            }
+        });
 
-        backButton.setText("Back");
+        backButton.setLabel("back");
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonActionPerformed(evt);
+            }
+        });
+
+        cardNumberLabel.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        cardNumberLabel.setText("Bank Card Number");
+
+        cnNeedsToBeNumberLabel.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        cnNeedsToBeNumberLabel.setForeground(new java.awt.Color(255, 0, 0));
+
+        cvcNeedsToBeLettersLabel.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        cvcNeedsToBeLettersLabel.setForeground(new java.awt.Color(255, 0, 0));
+        cvcNeedsToBeLettersLabel.setInheritsPopupMenu(false);
+
+        expDateField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                expDateFieldKeyTyped(evt);
+            }
+        });
+
+        dateNeedsToBeValidLabel.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        dateNeedsToBeValidLabel.setForeground(new java.awt.Color(255, 0, 0));
+
+        chNeedsToBeLetterLabel.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        chNeedsToBeLetterLabel.setForeground(new java.awt.Color(255, 0, 0));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -75,63 +119,154 @@ public class PaymentMethodCard extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(130, 130, 130)
+                        .addGap(129, 129, 129)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(expDateField, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(expDateLabel))
+                                    .addComponent(expDateLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(dateNeedsToBeValidLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(cvcLabel)
-                                    .addComponent(cvcField, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(cvcField, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cvcNeedsToBeLettersLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(cardholderNameLabel)
-                                        .addGap(0, 97, Short.MAX_VALUE))
-                                    .addComponent(cardholderNameField)))
-                            .addComponent(cardNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(enterDetailsLabel)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cardholderNameLabel)
+                                    .addComponent(cardholderNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(chNeedsToBeLetterLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cardNumberLabel)
+                                    .addComponent(cardNumberField, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(enterDetailsLabel)
+                                    .addComponent(cnNeedsToBeNumberLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(379, 379, 379)
-                        .addComponent(confirmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(379, 379, 379)
-                        .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(133, Short.MAX_VALUE))
+                        .addGap(378, 378, 378)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(confirmButton, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
+                            .addComponent(backButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(134, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(149, 149, 149)
-                .addComponent(enterDetailsLabel)
-                .addGap(18, 18, 18)
-                .addComponent(cardNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(expDateLabel)
-                    .addComponent(cvcLabel)
-                    .addComponent(cardholderNameLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cardholderNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cvcField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(expDateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(67, 67, 67)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(124, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(enterDetailsLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(cardNumberLabel)
+                        .addGap(11, 11, 11)
+                        .addComponent(cardNumberField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(cnNeedsToBeNumberLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(15, 15, 15)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(expDateLabel)
+                                    .addComponent(cvcLabel)
+                                    .addComponent(cardholderNameLabel))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(cardholderNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cvcField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(expDateField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cvcNeedsToBeLettersLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(chNeedsToBeLetterLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(dateNeedsToBeValidLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(45, 45, 45)
                 .addComponent(confirmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(backButton)
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(104, 104, 104))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void expDateFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_expDateFieldActionPerformed
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_expDateFieldActionPerformed
+        this.setVisible(false);
+        new PaymentPage().setVisible(true);
+    }//GEN-LAST:event_backButtonActionPerformed
 
+    private void cardNumberFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cardNumberFieldKeyPressed
+        // TODO add your handling code here:
+        char cn = evt.getKeyChar();
+        
+        if (Character.isLetter(cn)) {
+            cardNumberField.setEditable(false);
+            cnNeedsToBeNumberLabel.setText("*Only numbers are allowed.");
+        } else {
+            cardNumberField.setEditable(true);
+            cnNeedsToBeNumberLabel.setText("");
+        }
+    }//GEN-LAST:event_cardNumberFieldKeyPressed
+
+    private void expDateFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_expDateFieldKeyTyped
+        // TODO add your handling code here:
+        char expDate = evt.getKeyChar();
+        
+        if (!((expDate >= '0' && expDate <= '9') || expDate == '/' || expDate == KeyEvent.VK_BACK_SPACE)) {
+            evt.consume();
+        } else if (expDate == '/' && expDateField.getText().length() != 2) {
+            evt.consume();
+        } else if (expDateField.getText().length() == 5) {
+            evt.consume();
+        } else if (expDateField.getText().length() == 2 && Integer.parseInt(expDateField.getText()) > 12) {
+            evt.consume();
+            dateNeedsToBeValidLabel.setText("*Date must be valid.");
+        } else if (expDateField.getText().length() == 2 && Integer.parseInt(expDateField.getText()) <= 12) {
+            dateNeedsToBeValidLabel.setText("");
+            expDateField.setText(expDateField.getText() + "/");
+        }
+    }//GEN-LAST:event_expDateFieldKeyTyped
+
+    private void cvcFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cvcFieldKeyTyped
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        
+        if (!Character.isDigit(c)) {
+            evt.consume();
+            cvcNeedsToBeLettersLabel.setText("*Only numbers are allowed.");
+        } else if (cvcField.getText().length() >= 4) {
+            evt.consume();
+        } else {
+            cvcNeedsToBeLettersLabel.setText("");
+        }
+    }//GEN-LAST:event_cvcFieldKeyTyped
+
+    private void cardholderNameFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cardholderNameFieldKeyPressed
+        // TODO add your handling code here:
+        char ch = evt.getKeyChar();
+        
+        if (Character.isLetter(ch) || Character.isWhitespace(ch) || Character.isISOControl(ch)) {
+            cardholderNameField.setEditable(true);
+            chNeedsToBeLetterLabel.setText("");
+        } else {
+            cardholderNameField.setEditable(false);
+            chNeedsToBeLetterLabel.setText("*Only letters are allowed.");
+        }
+    }//GEN-LAST:event_cardholderNameFieldKeyPressed
+
+    private void confirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmButtonActionPerformed
+        // TODO add your handling code here:
+        if (!cardNumberField.getText().equals("") && !expDateField.getText().equals("") && !cvcField.getText().equals("") && (cvcField.getText().length() == 3 || cvcField.getText().length() == 4) && !cardholderNameField.getText().equals("")) {
+            this.setVisible(false);
+            new ConfirmationPage().setVisible(true);
+        } else if (cardNumberField.getText().equals("") || expDateField.getText().equals("") || cvcField.getText().equals("") || cardholderNameField.getText().equals("")){
+            javax.swing.JFrame f =  new javax.swing.JFrame();
+            javax.swing.JOptionPane.showMessageDialog(f, "Some/All fields are empty.");
+        } else if (cvcField.getText().length() == 1 || cvcField.getText().length() == 2) {
+            cvcNeedsToBeLettersLabel.setText("Invalid CVV/CVC. Must be a 3 or 4-digit number.");
+        }
+    }//GEN-LAST:event_confirmButtonActionPerformed
+    
     /**
      * @param args the command line arguments
      */
@@ -166,17 +301,23 @@ public class PaymentMethodCard extends javax.swing.JFrame {
             }
         });
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backButton;
-    private javax.swing.JTextField cardNumber;
+    private java.awt.Button backButton;
+    private javax.swing.JTextField cardNumberField;
+    private javax.swing.JLabel cardNumberLabel;
     private javax.swing.JTextField cardholderNameField;
     private javax.swing.JLabel cardholderNameLabel;
+    private javax.swing.JLabel chNeedsToBeLetterLabel;
+    private javax.swing.JLabel cnNeedsToBeNumberLabel;
     private javax.swing.JButton confirmButton;
     private javax.swing.JTextField cvcField;
     private javax.swing.JLabel cvcLabel;
+    private javax.swing.JLabel cvcNeedsToBeLettersLabel;
+    private javax.swing.JLabel dateNeedsToBeValidLabel;
     private javax.swing.JLabel enterDetailsLabel;
-    private javax.swing.JTextField expDateField;
+    private javax.swing.JFormattedTextField expDateField;
     private javax.swing.JLabel expDateLabel;
     // End of variables declaration//GEN-END:variables
 }

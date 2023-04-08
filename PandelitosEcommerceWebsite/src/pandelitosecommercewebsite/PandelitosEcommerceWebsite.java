@@ -16,11 +16,15 @@ public class PandelitosEcommerceWebsite
      */
     public static void main(String[] args)
     {
-        LogInPage p = new LogInPage();
-        PaymentPage pm = new PaymentPage();
-        PaymentMethodCard pmc = new PaymentMethodCard();
+        HomePage h = new HomePage();
+        SignUpPage s = new SignUpPage();
+        LogInPage l = new LogInPage();
+        ViewProductsPage vp = new ViewProductsPage();
+        ViewProductsPageNotLoggedIn vpnl = new ViewProductsPageNotLoggedIn();
+        PaymentPage p = new PaymentPage();
+        PaymentMethodCard pc = new PaymentMethodCard();
         ConfirmationPage c = new ConfirmationPage();
-        c.show();
+        pc.show();
     }
     
 }
