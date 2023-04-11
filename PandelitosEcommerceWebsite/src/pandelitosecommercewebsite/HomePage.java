@@ -98,7 +98,8 @@ public class HomePage extends javax.swing.JFrame {
     }//GEN-LAST:event_logInButtonInterfaceActionPerformed
 
     private void viewProductsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewProductsButtonActionPerformed
-
+        this.setVisible(false);
+        new ViewProductsPageNotLoggedIn().setVisible(true);
     }//GEN-LAST:event_viewProductsButtonActionPerformed
 
     /**

@@ -160,7 +160,7 @@ public class LogInPage extends javax.swing.JFrame {
         {
             System.out.println("Log In Successful");
             this.setVisible(false);
-            new ViewProductsPageNotLoggedIn().setVisible(true);
+            new ViewProductsPage().setVisible(true);
         }
         else if (userName.equals("") && password.equals(""))
         {

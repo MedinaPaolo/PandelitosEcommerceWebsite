@@ -36,6 +36,7 @@ public class SignUpPage extends javax.swing.JFrame {
         userNameTextBox = new javax.swing.JTextField();
         emailLabel1 = new javax.swing.JLabel();
         userNameLabel = new javax.swing.JLabel();
+        backButtonToHome = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -82,27 +83,39 @@ public class SignUpPage extends javax.swing.JFrame {
         userNameLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         userNameLabel.setText("Username");
 
+        backButtonToHome.setText("Back");
+        backButtonToHome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonToHomeActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap(268, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(emailLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(emailTextBox)
-                        .addComponent(userNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(passwordLabel)
-                        .addComponent(jPasswordField2)
-                        .addComponent(confirmedPasswordLabel)
-                        .addComponent(userNameTextBox)
-                        .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(signUpConfirmationButton)
-                        .addGap(105, 105, 105)))
-                .addGap(246, 246, 246))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(emailLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(emailTextBox)
+                                .addComponent(userNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(passwordLabel)
+                                .addComponent(jPasswordField2)
+                                .addComponent(confirmedPasswordLabel)
+                                .addComponent(userNameTextBox)
+                                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(signUpConfirmationButton)
+                                .addGap(105, 105, 105)))
+                        .addGap(246, 246, 246))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(backButtonToHome)
+                        .addGap(40, 40, 40))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,7 +138,9 @@ public class SignUpPage extends javax.swing.JFrame {
                 .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(signUpConfirmationButton)
-                .addGap(101, 101, 101))
+                .addGap(37, 37, 37)
+                .addComponent(backButtonToHome)
+                .addGap(41, 41, 41))
         );
 
         pack();
@@ -150,6 +165,12 @@ public class SignUpPage extends javax.swing.JFrame {
     private void userNameTextBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userNameTextBoxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_userNameTextBoxActionPerformed
+
+    private void backButtonToHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonToHomeActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new LogInPage().setVisible(true);
+    }//GEN-LAST:event_backButtonToHomeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -187,6 +208,7 @@ public class SignUpPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backButtonToHome;
     private javax.swing.JLabel confirmedPasswordLabel;
     private javax.swing.JLabel emailLabel1;
     private javax.swing.JTextField emailTextBox;
