@@ -45,6 +45,7 @@ public class PaymentMethodCard extends javax.swing.JFrame {
         chNeedsToBeLetterLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(950, 550));
 
         enterDetailsLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         enterDetailsLabel.setText("Enter Card Details");

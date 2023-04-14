@@ -35,6 +35,7 @@ public class PaymentPage extends javax.swing.JFrame {
         backButton = new java.awt.Button();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(950, 550));
 
         selectMethodLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         selectMethodLabel.setText("Select payment method:");
