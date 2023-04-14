@@ -15,6 +15,7 @@ public class ViewProductsPageNotLoggedIn extends javax.swing.JFrame {
      */
     public ViewProductsPageNotLoggedIn() {
         initComponents();
+        setTitle("View Products - Not Logged In");
     }
 
     /**
@@ -30,6 +31,7 @@ public class ViewProductsPageNotLoggedIn extends javax.swing.JFrame {
         backToMainButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(950, 550));
 
         redirectToLogInPage.setText("Log In");
         redirectToLogInPage.addActionListener(new java.awt.event.ActionListener() {

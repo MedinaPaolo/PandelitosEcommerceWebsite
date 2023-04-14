@@ -17,6 +17,7 @@ public class Cart extends javax.swing.JFrame
     public Cart()
     {
         initComponents();
+        setTitle("Cart");
     }
 
     /**
@@ -26,8 +27,7 @@ public class Cart extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         productName1 = new javax.swing.JLabel();
         removeFromCart1 = new javax.swing.JLabel();
@@ -57,10 +57,8 @@ public class Cart extends javax.swing.JFrame
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         backButton.setText("Back");
-        backButton.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButtonActionPerformed(evt);
             }
         });
@@ -70,10 +68,8 @@ public class Cart extends javax.swing.JFrame
         getContentPane().add(totalPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 400, -1, -1));
 
         toCheckout.setText("Proceed to checkout");
-        toCheckout.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        toCheckout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 toCheckoutActionPerformed(evt);
             }
         });

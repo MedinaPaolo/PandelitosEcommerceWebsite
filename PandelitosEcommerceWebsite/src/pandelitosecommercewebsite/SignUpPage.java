@@ -39,6 +39,7 @@ public class SignUpPage extends javax.swing.JFrame {
         backButtonToHome = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(950, 550));
 
         passwordLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         passwordLabel.setText("Password");
@@ -94,8 +95,8 @@ public class SignUpPage extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(268, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(171, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -112,15 +113,14 @@ public class SignUpPage extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(signUpConfirmationButton)
                                 .addGap(105, 105, 105)))
-                        .addGap(246, 246, 246))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(backButtonToHome)
-                        .addGap(40, 40, 40))))
+                        .addGap(206, 206, 206))
+                    .addComponent(backButtonToHome, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(137, 137, 137))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(111, Short.MAX_VALUE)
+                .addContainerGap(96, Short.MAX_VALUE)
                 .addComponent(emailLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(emailTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -140,7 +140,7 @@ public class SignUpPage extends javax.swing.JFrame {
                 .addComponent(signUpConfirmationButton)
                 .addGap(37, 37, 37)
                 .addComponent(backButtonToHome)
-                .addGap(41, 41, 41))
+                .addGap(56, 56, 56))
         );
 
         pack();

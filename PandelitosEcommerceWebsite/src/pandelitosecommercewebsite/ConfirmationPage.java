@@ -30,18 +30,16 @@ public class ConfirmationPage extends javax.swing.JFrame {
         thankYouLabel = new javax.swing.JLabel();
         productsPurchasedLabel = new javax.swing.JLabel();
         totalPriceLabel = new javax.swing.JLabel();
-        totalPriceField = new javax.swing.JTextField();
         deliveryAddressLabel = new javax.swing.JLabel();
-        deliveryAddressField = new javax.swing.JTextField();
         purchaseConfirmedLabel1 = new javax.swing.JLabel();
         returnButton = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
-        productNameField = new javax.swing.JTextField();
-        amountField = new javax.swing.JTextField();
-        productPriceField = new javax.swing.JTextField();
         productImage = new javax.swing.JLabel();
+        productNameLabel = new javax.swing.JLabel();
+        amountLabel = new javax.swing.JLabel();
+        productPriceLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(950, 550));
@@ -66,18 +64,13 @@ public class ConfirmationPage extends javax.swing.JFrame {
             }
         });
 
-        productNameField.setText("Product Name");
-        productNameField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                productNameFieldActionPerformed(evt);
-            }
-        });
-
-        amountField.setText("Amount");
-
-        productPriceField.setText("Product Price");
-
         productImage.setText("Product");
+
+        productNameLabel.setText("Product Name");
+
+        amountLabel.setText("Amount:");
+
+        productPriceLabel.setText("Product Price:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -86,24 +79,24 @@ public class ConfirmationPage extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(productImage, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(94, 94, 94)
-                .addComponent(productNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(89, 89, 89)
-                .addComponent(amountField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(77, 77, 77)
-                .addComponent(productPriceField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(109, Short.MAX_VALUE))
+                .addGap(100, 100, 100)
+                .addComponent(productNameLabel)
+                .addGap(96, 96, 96)
+                .addComponent(amountLabel)
+                .addGap(91, 91, 91)
+                .addComponent(productPriceLabel)
+                .addContainerGap(129, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(60, 60, 60)
+                .addGap(63, 63, 63)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(productNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(amountField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(productPriceField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(productImage))
-                .addContainerGap(181, Short.MAX_VALUE))
+                    .addComponent(productImage)
+                    .addComponent(productNameLabel)
+                    .addComponent(amountLabel)
+                    .addComponent(productPriceLabel))
+                .addContainerGap(184, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(jPanel1);
@@ -141,9 +134,7 @@ public class ConfirmationPage extends javax.swing.JFrame {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                     .addComponent(totalPriceLabel)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(totalPriceField, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(122, 122, 122))
+                                    .addGap(270, 270, 270))
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                     .addComponent(purchaseConfirmedLabel1)
                                     .addGap(334, 334, 334))))
@@ -151,9 +142,7 @@ public class ConfirmationPage extends javax.swing.JFrame {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup()
                                     .addGap(6, 6, 6)
-                                    .addComponent(deliveryAddressLabel)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(deliveryAddressField, javax.swing.GroupLayout.PREFERRED_SIZE, 534, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(deliveryAddressLabel))
                                 .addGroup(layout.createSequentialGroup()
                                     .addGap(159, 159, 159)
                                     .addComponent(thankYouLabel))
@@ -166,21 +155,17 @@ public class ConfirmationPage extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(70, Short.MAX_VALUE)
+                .addContainerGap(76, Short.MAX_VALUE)
                 .addComponent(purchaseConfirmedLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(productsPurchasedLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(totalPriceLabel)
-                    .addComponent(totalPriceField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
+                .addComponent(totalPriceLabel)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(deliveryAddressLabel)
-                    .addComponent(deliveryAddressField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
+                .addComponent(deliveryAddressLabel)
+                .addGap(37, 37, 37)
                 .addComponent(thankYouLabel)
                 .addGap(58, 58, 58)
                 .addComponent(returnButton)
@@ -195,10 +180,6 @@ public class ConfirmationPage extends javax.swing.JFrame {
         this.setVisible(false);
         new HomePage().setVisible(true);
     }//GEN-LAST:event_returnButtonActionPerformed
-
-    private void productNameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productNameFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_productNameFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -236,20 +217,18 @@ public class ConfirmationPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField amountField;
-    private javax.swing.JTextField deliveryAddressField;
+    private javax.swing.JLabel amountLabel;
     private javax.swing.JLabel deliveryAddressLabel;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel productImage;
-    private javax.swing.JTextField productNameField;
-    private javax.swing.JTextField productPriceField;
+    private javax.swing.JLabel productNameLabel;
+    private javax.swing.JLabel productPriceLabel;
     private javax.swing.JLabel productsPurchasedLabel;
     private javax.swing.JLabel purchaseConfirmedLabel1;
     private javax.swing.JButton returnButton;
     private javax.swing.JLabel thankYouLabel;
-    private javax.swing.JTextField totalPriceField;
     private javax.swing.JLabel totalPriceLabel;
     // End of variables declaration//GEN-END:variables
 }

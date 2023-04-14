@@ -17,6 +17,7 @@ public class ProductInformation extends javax.swing.JFrame
     public ProductInformation()
     {
         initComponents();
+        setTitle("Product Information");
     }
 
     /**
@@ -26,8 +27,7 @@ public class ProductInformation extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         jInternalFrame1 = new javax.swing.JInternalFrame();
         productName = new javax.swing.JLabel();
@@ -62,10 +62,8 @@ public class ProductInformation extends javax.swing.JFrame
         getContentPane().add(productDescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 170, -1, -1));
 
         addToCart.setText("Add to Cart");
-        addToCart.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        addToCart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addToCartActionPerformed(evt);
             }
         });
@@ -78,20 +76,16 @@ public class ProductInformation extends javax.swing.JFrame
         getContentPane().add(productImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, -1, -1));
 
         backButton.setText("Back");
-        backButton.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButtonActionPerformed(evt);
             }
         });
         getContentPane().add(backButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 450, -1, -1));
 
         goToCart.setText("Go to Cart");
-        goToCart.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        goToCart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 goToCartActionPerformed(evt);
             }
         });

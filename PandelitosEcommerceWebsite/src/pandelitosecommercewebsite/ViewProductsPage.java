@@ -15,6 +15,7 @@ public class ViewProductsPage extends javax.swing.JFrame {
      */
     public ViewProductsPage() {
         initComponents();
+        setTitle("View Products");
     }
 
     /**
@@ -24,18 +25,16 @@ public class ViewProductsPage extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         goToCart = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(950, 550));
 
         goToCart.setText("Go to Cart");
-        goToCart.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        goToCart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 goToCartActionPerformed(evt);
             }
         });

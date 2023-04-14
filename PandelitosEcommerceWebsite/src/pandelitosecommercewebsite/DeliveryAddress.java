@@ -17,6 +17,7 @@ public class DeliveryAddress extends javax.swing.JFrame
     public DeliveryAddress()
     {
         initComponents();
+        setTitle("Delivery Address");
     }
 
     /**
@@ -26,8 +27,7 @@ public class DeliveryAddress extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         jFileChooser1 = new javax.swing.JFileChooser();
         jDialog1 = new javax.swing.JDialog();
@@ -62,30 +62,24 @@ public class DeliveryAddress extends javax.swing.JFrame
         jLabel1.setText("Enter Delivery Address");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, -1, -1));
 
-        deliveryAddress.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        deliveryAddress.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deliveryAddressActionPerformed(evt);
             }
         });
         getContentPane().add(deliveryAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 350, -1));
 
         backButton.setText("Back");
-        backButton.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButtonActionPerformed(evt);
             }
         });
         getContentPane().add(backButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 320, -1, -1));
 
         proceedToPayment.setText("Proceed");
-        proceedToPayment.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        proceedToPayment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 proceedToPaymentActionPerformed(evt);
             }
         });
