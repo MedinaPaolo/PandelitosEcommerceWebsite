@@ -24,16 +24,19 @@ public class ViewProductsPage extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
-        jButton1 = new javax.swing.JButton();
+        goToCart = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Go to Cart");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+        goToCart.setText("Go to Cart");
+        goToCart.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                goToCartActionPerformed(evt);
             }
         });
 
@@ -42,26 +45,26 @@ public class ViewProductsPage extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(631, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(56, 56, 56))
+                .addContainerGap(601, Short.MAX_VALUE)
+                .addComponent(goToCart)
+                .addGap(86, 86, 86))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jButton1)
-                .addContainerGap(417, Short.MAX_VALUE))
+                .addGap(48, 48, 48)
+                .addComponent(goToCart)
+                .addContainerGap(406, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+    private void goToCartActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_goToCartActionPerformed
+    {//GEN-HEADEREND:event_goToCartActionPerformed
         this.setVisible(false);
-        new GoToCartPage().setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+        new Cart().setVisible(true);
+    }//GEN-LAST:event_goToCartActionPerformed
 
     /**
      * @param args the command line arguments
@@ -99,6 +102,6 @@ public class ViewProductsPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton goToCart;
     // End of variables declaration//GEN-END:variables
 }

@@ -25,7 +25,8 @@ public class ConfirmationPage extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         thankYouLabel = new javax.swing.JLabel();
         productsPurchasedLabel = new javax.swing.JLabel();
@@ -59,15 +60,19 @@ public class ConfirmationPage extends javax.swing.JFrame {
         purchaseConfirmedLabel1.setText("Purchase confirmed!");
 
         returnButton.setText("Return");
-        returnButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        returnButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 returnButtonActionPerformed(evt);
             }
         });
 
         productNameField.setText("Product Name");
-        productNameField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        productNameField.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 productNameFieldActionPerformed(evt);
             }
         });
