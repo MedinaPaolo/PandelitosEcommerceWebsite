@@ -87,7 +87,7 @@ public class HomePage extends javax.swing.JFrame {
                         .addComponent(jLabel1)))
                 .addGap(18, 18, 18)
                 .addComponent(pandelitosLabelName)
-                .addContainerGap(158, Short.MAX_VALUE))
+                .addContainerGap(155, Short.MAX_VALUE))
         );
 
         pack();
