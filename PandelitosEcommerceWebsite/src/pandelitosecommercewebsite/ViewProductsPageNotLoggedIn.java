@@ -34,6 +34,7 @@ public class ViewProductsPageNotLoggedIn extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(950, 550));
 
         redirectToLogInPage.setText("Log In");
+        redirectToLogInPage.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         redirectToLogInPage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 redirectToLogInPageActionPerformed(evt);
@@ -41,6 +42,7 @@ public class ViewProductsPageNotLoggedIn extends javax.swing.JFrame {
         });
 
         backToMainButton.setText("Home");
+        backToMainButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         backToMainButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backToMainButtonActionPerformed(evt);

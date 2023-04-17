@@ -35,6 +35,7 @@ public class PaymentPage extends javax.swing.JFrame {
         backButton = new java.awt.Button();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(950, 550));
 
         selectMethodLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -42,17 +43,21 @@ public class PaymentPage extends javax.swing.JFrame {
 
         buttonGroup1.add(codCheckBox);
         codCheckBox.setText("Cash on delivery");
+        codCheckBox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         buttonGroup1.add(cardCheckBox);
         cardCheckBox.setText("Card");
+        cardCheckBox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         proceedButton.setText("Proceed");
+        proceedButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         proceedButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 proceedButtonActionPerformed(evt);
             }
         });
 
+        backButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         backButton.setLabel("back");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

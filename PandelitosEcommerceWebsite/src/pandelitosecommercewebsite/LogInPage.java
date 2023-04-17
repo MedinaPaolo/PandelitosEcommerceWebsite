@@ -38,6 +38,7 @@ public class LogInPage extends javax.swing.JFrame {
         backButton = new java.awt.Button();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(950, 550));
 
         userNameLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -59,6 +60,7 @@ public class LogInPage extends javax.swing.JFrame {
         });
 
         logInButton.setText("Log In");
+        logInButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         logInButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 logInButtonActionPerformed(evt);
@@ -70,12 +72,14 @@ public class LogInPage extends javax.swing.JFrame {
         signUpLabel.setText("Haven't created an account yet?");
 
         signUpButton.setText("Sign Up");
+        signUpButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         signUpButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 signUpButtonActionPerformed(evt);
             }
         });
 
+        backButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         backButton.setLabel("back");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

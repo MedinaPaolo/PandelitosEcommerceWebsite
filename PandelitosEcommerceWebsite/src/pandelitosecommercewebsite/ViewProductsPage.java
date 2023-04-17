@@ -33,6 +33,7 @@ public class ViewProductsPage extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(950, 550));
 
         goToCart.setText("Go to Cart");
+        goToCart.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         goToCart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 goToCartActionPerformed(evt);

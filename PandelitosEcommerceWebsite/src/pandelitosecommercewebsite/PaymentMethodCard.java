@@ -45,6 +45,7 @@ public class PaymentMethodCard extends javax.swing.JFrame {
         chNeedsToBeLetterLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(950, 550));
 
         enterDetailsLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -78,12 +79,14 @@ public class PaymentMethodCard extends javax.swing.JFrame {
         });
 
         confirmButton.setText("Confirm");
+        confirmButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         confirmButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 confirmButtonActionPerformed(evt);
             }
         });
 
+        backButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         backButton.setLabel("back");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

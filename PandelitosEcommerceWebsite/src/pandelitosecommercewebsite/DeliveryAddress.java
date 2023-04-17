@@ -55,6 +55,7 @@ public class DeliveryAddress extends javax.swing.JFrame
         jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(950, 550));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -70,6 +71,7 @@ public class DeliveryAddress extends javax.swing.JFrame
         getContentPane().add(deliveryAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 350, -1));
 
         backButton.setText("Back");
+        backButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButtonActionPerformed(evt);
@@ -78,6 +80,7 @@ public class DeliveryAddress extends javax.swing.JFrame
         getContentPane().add(backButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 320, -1, -1));
 
         proceedToPayment.setText("Proceed");
+        proceedToPayment.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         proceedToPayment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 proceedToPaymentActionPerformed(evt);

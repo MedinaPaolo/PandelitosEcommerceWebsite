@@ -71,6 +71,9 @@
     <Component class="javax.swing.JButton" name="addToCart">
       <Properties>
         <Property name="text" type="java.lang.String" value="Add to Cart"/>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Hand Cursor"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addToCartActionPerformed"/>
@@ -117,6 +120,9 @@
     <Component class="javax.swing.JButton" name="goToCart">
       <Properties>
         <Property name="text" type="java.lang.String" value="Go to Cart"/>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Hand Cursor"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="goToCartActionPerformed"/>

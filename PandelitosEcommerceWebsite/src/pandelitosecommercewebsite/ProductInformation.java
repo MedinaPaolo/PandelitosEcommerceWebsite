@@ -62,6 +62,7 @@ public class ProductInformation extends javax.swing.JFrame
         getContentPane().add(productDescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 170, -1, -1));
 
         addToCart.setText("Add to Cart");
+        addToCart.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         addToCart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addToCartActionPerformed(evt);
@@ -84,6 +85,7 @@ public class ProductInformation extends javax.swing.JFrame
         getContentPane().add(backButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 450, -1, -1));
 
         goToCart.setText("Go to Cart");
+        goToCart.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         goToCart.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 goToCartActionPerformed(evt);

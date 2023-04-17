@@ -42,6 +42,7 @@ public class ConfirmationPage extends javax.swing.JFrame {
         productPriceLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(950, 550));
 
         thankYouLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -58,6 +59,7 @@ public class ConfirmationPage extends javax.swing.JFrame {
         purchaseConfirmedLabel1.setText("Purchase confirmed!");
 
         returnButton.setText("Return");
+        returnButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         returnButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 returnButtonActionPerformed(evt);

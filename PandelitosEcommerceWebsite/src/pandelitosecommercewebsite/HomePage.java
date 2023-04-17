@@ -39,6 +39,7 @@ public class HomePage extends javax.swing.JFrame {
         pandelitosLabelName.setText("Welcome to Pandelitos!");
 
         logInButtonInterface.setText("Log In");
+        logInButtonInterface.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         logInButtonInterface.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 logInButtonInterfaceActionPerformed(evt);
@@ -46,6 +47,7 @@ public class HomePage extends javax.swing.JFrame {
         });
 
         viewProductsButton.setText("View Products");
+        viewProductsButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         viewProductsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 viewProductsButtonActionPerformed(evt);

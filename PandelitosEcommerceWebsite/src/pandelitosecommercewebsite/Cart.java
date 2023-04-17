@@ -53,10 +53,12 @@ public class Cart extends javax.swing.JFrame
         removeFromCart1.setText("RemoveFromCart");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(950, 550));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         backButton.setText("Back");
+        backButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButtonActionPerformed(evt);
@@ -68,6 +70,7 @@ public class Cart extends javax.swing.JFrame
         getContentPane().add(totalPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 400, -1, -1));
 
         toCheckout.setText("Proceed to checkout");
+        toCheckout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         toCheckout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 toCheckoutActionPerformed(evt);

@@ -60,12 +60,14 @@ public class SignUpPage extends javax.swing.JFrame {
         });
 
         signUpConfirmationButton.setText("Sign Up");
+        signUpConfirmationButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         signUpConfirmationButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 signUpConfirmationButtonActionPerformed(evt);
             }
         });
 
+        emailTextBox.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
         emailTextBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emailTextBoxActionPerformed(evt);
@@ -85,6 +87,7 @@ public class SignUpPage extends javax.swing.JFrame {
         userNameLabel.setText("Username");
 
         backButtonToHome.setText("Back");
+        backButtonToHome.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         backButtonToHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButtonToHomeActionPerformed(evt);
