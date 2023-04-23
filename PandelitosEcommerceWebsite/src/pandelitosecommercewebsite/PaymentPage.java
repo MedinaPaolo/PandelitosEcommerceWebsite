@@ -33,20 +33,26 @@ public class PaymentPage extends javax.swing.JFrame {
         cardCheckBox = new javax.swing.JCheckBox();
         proceedButton = new javax.swing.JButton();
         backButton = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        Pandelitos1 = new javax.swing.JButton();
+        Homepage = new javax.swing.JButton();
+        Pandelitos = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(950, 550));
 
-        selectMethodLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        selectMethodLabel.setFont(new java.awt.Font("Serif", 0, 18)); // NOI18N
         selectMethodLabel.setText("Select payment method:");
 
         buttonGroup1.add(codCheckBox);
+        codCheckBox.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
         codCheckBox.setText("Cash on delivery");
         codCheckBox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         buttonGroup1.add(cardCheckBox);
+        cardCheckBox.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
         cardCheckBox.setText("Card");
         cardCheckBox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -66,6 +72,58 @@ public class PaymentPage extends javax.swing.JFrame {
             }
         });
 
+        jPanel1.setBackground(new java.awt.Color(255, 144, 0));
+
+        Pandelitos1.setBackground(new java.awt.Color(255, 144, 0));
+        Pandelitos1.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        Pandelitos1.setText("Freshly Baked Hand Rolled Pandesal");
+        Pandelitos1.setBorder(null);
+        Pandelitos1.setBorderPainted(false);
+        Pandelitos1.setContentAreaFilled(false);
+
+        Homepage.setBackground(new java.awt.Color(255, 144, 0));
+        Homepage.setForeground(new java.awt.Color(255, 144, 0));
+        Homepage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pandelitosecommercewebsite/Images/SmallPandelitos.jpg"))); // NOI18N
+        Homepage.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Homepage.setBorderPainted(false);
+        Homepage.setContentAreaFilled(false);
+        Homepage.setMaximumSize(new java.awt.Dimension(100, 100));
+        Homepage.setMinimumSize(new java.awt.Dimension(100, 100));
+        Homepage.setPreferredSize(new java.awt.Dimension(100, 100));
+
+        Pandelitos.setBackground(new java.awt.Color(255, 144, 0));
+        Pandelitos.setFont(new java.awt.Font("Serif", 1, 28)); // NOI18N
+        Pandelitos.setText("Pandelitos");
+        Pandelitos.setBorder(null);
+        Pandelitos.setBorderPainted(false);
+        Pandelitos.setContentAreaFilled(false);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(Homepage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Pandelitos)
+                    .addComponent(Pandelitos1))
+                .addContainerGap(342, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Homepage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Pandelitos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Pandelitos1)
+                .addGap(15, 15, 15))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -80,12 +138,14 @@ public class PaymentPage extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(backButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(proceedButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(408, Short.MAX_VALUE))
+                .addContainerGap(428, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(145, 145, 145)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45)
                 .addComponent(selectMethodLabel)
                 .addGap(18, 18, 18)
                 .addComponent(codCheckBox)
@@ -95,7 +155,7 @@ public class PaymentPage extends javax.swing.JFrame {
                 .addComponent(proceedButton)
                 .addGap(18, 18, 18)
                 .addComponent(backButton)
-                .addContainerGap(210, Short.MAX_VALUE))
+                .addContainerGap(87, Short.MAX_VALUE))
         );
 
         pack();
@@ -163,10 +223,14 @@ public class PaymentPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Homepage;
+    private javax.swing.JButton Pandelitos;
+    private javax.swing.JButton Pandelitos1;
     private javax.swing.JButton backButton;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JCheckBox cardCheckBox;
     private javax.swing.JCheckBox codCheckBox;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JButton proceedButton;
     private javax.swing.JLabel selectMethodLabel;
     // End of variables declaration//GEN-END:variables
