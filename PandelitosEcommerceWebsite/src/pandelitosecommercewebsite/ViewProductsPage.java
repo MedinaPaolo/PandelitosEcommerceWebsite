@@ -25,8 +25,7 @@ public class ViewProductsPage extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         Product1 = new javax.swing.JButton();
         Product2 = new javax.swing.JButton();
@@ -44,28 +43,25 @@ public class ViewProductsPage extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Product1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pandelitosecommercewebsite/Images/SmallPandesal.jpg"))); // NOI18N
-        Product1.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        Product1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Product1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Product1ActionPerformed(evt);
             }
         });
 
         Product2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pandelitosecommercewebsite/Images/SmallEnsaymada.jpg"))); // NOI18N
-        Product2.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        Product2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Product2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Product2ActionPerformed(evt);
             }
         });
 
         Product3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pandelitosecommercewebsite/Images/SmallSpanishBread.jpg"))); // NOI18N
-        Product3.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        Product3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Product3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Product3ActionPerformed(evt);
             }
         });
@@ -83,10 +79,8 @@ public class ViewProductsPage extends javax.swing.JFrame {
 
         goToCart.setText("Go to Cart");
         goToCart.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        goToCart.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        goToCart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 goToCartActionPerformed(evt);
             }
         });
@@ -100,40 +94,32 @@ public class ViewProductsPage extends javax.swing.JFrame {
         Homepage.setMaximumSize(new java.awt.Dimension(100, 100));
         Homepage.setMinimumSize(new java.awt.Dimension(100, 100));
         Homepage.setPreferredSize(new java.awt.Dimension(100, 100));
-        Homepage.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        Homepage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HomepageActionPerformed(evt);
             }
         });
 
         Pandelitos.setBackground(new java.awt.Color(255, 144, 0));
         Pandelitos.setFont(new java.awt.Font("Serif", 1, 28)); // NOI18N
-        Pandelitos.setForeground(new java.awt.Color(0, 0, 0));
         Pandelitos.setText("Pandelitos");
         Pandelitos.setBorder(null);
         Pandelitos.setBorderPainted(false);
         Pandelitos.setContentAreaFilled(false);
-        Pandelitos.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        Pandelitos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PandelitosActionPerformed(evt);
             }
         });
 
         Pandelitos1.setBackground(new java.awt.Color(255, 144, 0));
         Pandelitos1.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
-        Pandelitos1.setForeground(new java.awt.Color(0, 0, 0));
         Pandelitos1.setText("Freshly Baked Hand Rolled Pandesal");
         Pandelitos1.setBorder(null);
         Pandelitos1.setBorderPainted(false);
         Pandelitos1.setContentAreaFilled(false);
-        Pandelitos1.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        Pandelitos1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Pandelitos1ActionPerformed(evt);
             }
         });
