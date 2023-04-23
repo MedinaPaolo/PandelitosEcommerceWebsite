@@ -47,6 +47,10 @@ public class Cart extends javax.swing.JFrame
         productAmount = new javax.swing.JLabel();
         productPrice = new javax.swing.JLabel();
         removeFromCart = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        Pandelitos1 = new javax.swing.JButton();
+        Homepage = new javax.swing.JButton();
+        Pandelitos = new javax.swing.JButton();
 
         productName1.setText("ProductName");
 
@@ -64,38 +68,49 @@ public class Cart extends javax.swing.JFrame
                 backButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(backButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 440, -1, -1));
+        getContentPane().add(backButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 500, -1, -1));
 
+        totalPrice.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
         totalPrice.setText("TotalPrice");
-        getContentPane().add(totalPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 400, -1, -1));
+        getContentPane().add(totalPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 460, -1, -1));
 
-        toCheckout.setText("Proceed to checkout");
+        toCheckout.setText("Proceed To Checkout");
         toCheckout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         toCheckout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 toCheckoutActionPerformed(evt);
             }
         });
-        getContentPane().add(toCheckout, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 440, -1, -1));
+        getContentPane().add(toCheckout, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 500, -1, -1));
 
+        productName2.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
         productName2.setText("ProductName");
 
+        productImage1.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
         productImage1.setText("ProductImage");
 
+        productAmount1.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
         productAmount1.setText("ProductAmount");
 
+        productPrice1.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
         productPrice1.setText("ProductPrice");
 
+        removeFromCart2.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
         removeFromCart2.setText("RemoveFromCart");
 
+        productName.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
         productName.setText("ProductName");
 
+        productImage.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
         productImage.setText("ProductImage");
 
+        productAmount.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
         productAmount.setText("ProductAmount");
 
+        productPrice.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
         productPrice.setText("ProductPrice");
 
+        removeFromCart.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
         removeFromCart.setText("RemoveFromCart");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -171,7 +186,61 @@ public class Cart extends javax.swing.JFrame
 
         jScrollPane1.setViewportView(jPanel2);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, 560, 320));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 560, 320));
+
+        jPanel3.setBackground(new java.awt.Color(255, 144, 0));
+
+        Pandelitos1.setBackground(new java.awt.Color(255, 144, 0));
+        Pandelitos1.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        Pandelitos1.setText("Freshly Baked Hand Rolled Pandesal");
+        Pandelitos1.setBorder(null);
+        Pandelitos1.setBorderPainted(false);
+        Pandelitos1.setContentAreaFilled(false);
+
+        Homepage.setBackground(new java.awt.Color(255, 144, 0));
+        Homepage.setForeground(new java.awt.Color(255, 144, 0));
+        Homepage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pandelitosecommercewebsite/Images/SmallPandelitos.jpg"))); // NOI18N
+        Homepage.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Homepage.setBorderPainted(false);
+        Homepage.setContentAreaFilled(false);
+        Homepage.setMaximumSize(new java.awt.Dimension(100, 100));
+        Homepage.setMinimumSize(new java.awt.Dimension(100, 100));
+        Homepage.setPreferredSize(new java.awt.Dimension(100, 100));
+
+        Pandelitos.setBackground(new java.awt.Color(255, 144, 0));
+        Pandelitos.setFont(new java.awt.Font("Serif", 1, 28)); // NOI18N
+        Pandelitos.setText("Pandelitos");
+        Pandelitos.setBorder(null);
+        Pandelitos.setBorderPainted(false);
+        Pandelitos.setContentAreaFilled(false);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(Homepage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Pandelitos)
+                    .addComponent(Pandelitos1))
+                .addContainerGap(571, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Homepage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Pandelitos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Pandelitos1)
+                .addGap(15, 15, 15))
+        );
+
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -234,9 +303,13 @@ public class Cart extends javax.swing.JFrame
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Homepage;
+    private javax.swing.JButton Pandelitos;
+    private javax.swing.JButton Pandelitos1;
     private javax.swing.JButton backButton;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel productAmount;
     private javax.swing.JLabel productAmount1;

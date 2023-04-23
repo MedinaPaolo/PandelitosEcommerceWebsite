@@ -37,6 +37,10 @@ public class DeliveryAddress extends javax.swing.JFrame
         deliveryAddress = new javax.swing.JTextField();
         backButton = new javax.swing.JButton();
         proceedToPayment = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        Pandelitos1 = new javax.swing.JButton();
+        Homepage = new javax.swing.JButton();
+        Pandelitos = new javax.swing.JButton();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -58,7 +62,7 @@ public class DeliveryAddress extends javax.swing.JFrame
         setPreferredSize(new java.awt.Dimension(950, 550));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
         jLabel1.setText("Enter Delivery Address");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, -1, -1));
 
@@ -84,6 +88,60 @@ public class DeliveryAddress extends javax.swing.JFrame
             }
         });
         getContentPane().add(proceedToPayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 320, -1, -1));
+
+        jPanel1.setBackground(new java.awt.Color(255, 144, 0));
+
+        Pandelitos1.setBackground(new java.awt.Color(255, 144, 0));
+        Pandelitos1.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        Pandelitos1.setText("Freshly Baked Hand Rolled Pandesal");
+        Pandelitos1.setBorder(null);
+        Pandelitos1.setBorderPainted(false);
+        Pandelitos1.setContentAreaFilled(false);
+
+        Homepage.setBackground(new java.awt.Color(255, 144, 0));
+        Homepage.setForeground(new java.awt.Color(255, 144, 0));
+        Homepage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pandelitosecommercewebsite/Images/SmallPandelitos.jpg"))); // NOI18N
+        Homepage.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Homepage.setBorderPainted(false);
+        Homepage.setContentAreaFilled(false);
+        Homepage.setMaximumSize(new java.awt.Dimension(100, 100));
+        Homepage.setMinimumSize(new java.awt.Dimension(100, 100));
+        Homepage.setPreferredSize(new java.awt.Dimension(100, 100));
+
+        Pandelitos.setBackground(new java.awt.Color(255, 144, 0));
+        Pandelitos.setFont(new java.awt.Font("Serif", 1, 28)); // NOI18N
+        Pandelitos.setText("Pandelitos");
+        Pandelitos.setBorder(null);
+        Pandelitos.setBorderPainted(false);
+        Pandelitos.setContentAreaFilled(false);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(Homepage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Pandelitos)
+                    .addComponent(Pandelitos1))
+                .addContainerGap(571, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Homepage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Pandelitos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Pandelitos1)
+                .addGap(15, 15, 15))
+        );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -158,12 +216,16 @@ public class DeliveryAddress extends javax.swing.JFrame
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Homepage;
+    private javax.swing.JButton Pandelitos;
+    private javax.swing.JButton Pandelitos1;
     private javax.swing.JButton backButton;
     private javax.swing.JTextField deliveryAddress;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
     private javax.swing.JButton proceedToPayment;
     // End of variables declaration//GEN-END:variables

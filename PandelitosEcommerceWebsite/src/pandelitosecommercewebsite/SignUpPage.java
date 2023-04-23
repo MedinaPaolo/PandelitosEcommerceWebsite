@@ -37,11 +37,15 @@ public class SignUpPage extends javax.swing.JFrame {
         emailLabel1 = new javax.swing.JLabel();
         userNameLabel = new javax.swing.JLabel();
         backButtonToHome = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        Pandelitos1 = new javax.swing.JButton();
+        Homepage = new javax.swing.JButton();
+        Pandelitos = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(950, 550));
 
-        passwordLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        passwordLabel.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         passwordLabel.setText("Password");
 
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
@@ -50,7 +54,7 @@ public class SignUpPage extends javax.swing.JFrame {
             }
         });
 
-        confirmedPasswordLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        confirmedPasswordLabel.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         confirmedPasswordLabel.setText("Confirm Password");
 
         jPasswordField2.addActionListener(new java.awt.event.ActionListener() {
@@ -80,10 +84,10 @@ public class SignUpPage extends javax.swing.JFrame {
             }
         });
 
-        emailLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        emailLabel1.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         emailLabel1.setText("Email");
 
-        userNameLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        userNameLabel.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         userNameLabel.setText("Username");
 
         backButtonToHome.setText("Back");
@@ -94,10 +98,63 @@ public class SignUpPage extends javax.swing.JFrame {
             }
         });
 
+        jPanel1.setBackground(new java.awt.Color(255, 144, 0));
+
+        Pandelitos1.setBackground(new java.awt.Color(255, 144, 0));
+        Pandelitos1.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        Pandelitos1.setText("Freshly Baked Hand Rolled Pandesal");
+        Pandelitos1.setBorder(null);
+        Pandelitos1.setBorderPainted(false);
+        Pandelitos1.setContentAreaFilled(false);
+
+        Homepage.setBackground(new java.awt.Color(255, 144, 0));
+        Homepage.setForeground(new java.awt.Color(255, 144, 0));
+        Homepage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pandelitosecommercewebsite/Images/SmallPandelitos.jpg"))); // NOI18N
+        Homepage.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Homepage.setBorderPainted(false);
+        Homepage.setContentAreaFilled(false);
+        Homepage.setMaximumSize(new java.awt.Dimension(100, 100));
+        Homepage.setMinimumSize(new java.awt.Dimension(100, 100));
+        Homepage.setPreferredSize(new java.awt.Dimension(100, 100));
+
+        Pandelitos.setBackground(new java.awt.Color(255, 144, 0));
+        Pandelitos.setFont(new java.awt.Font("Serif", 1, 28)); // NOI18N
+        Pandelitos.setText("Pandelitos");
+        Pandelitos.setBorder(null);
+        Pandelitos.setBorderPainted(false);
+        Pandelitos.setContentAreaFilled(false);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(Homepage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Pandelitos)
+                    .addComponent(Pandelitos1))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Homepage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Pandelitos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Pandelitos1)
+                .addGap(15, 15, 15))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(171, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -116,14 +173,16 @@ public class SignUpPage extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(signUpConfirmationButton)
                                 .addGap(105, 105, 105)))
-                        .addGap(206, 206, 206))
-                    .addComponent(backButtonToHome, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(137, 137, 137))
+                        .addGap(343, 343, 343))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(backButtonToHome)
+                        .addGap(59, 59, 59))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(96, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
                 .addComponent(emailLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(emailTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -141,9 +200,9 @@ public class SignUpPage extends javax.swing.JFrame {
                 .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(signUpConfirmationButton)
-                .addGap(37, 37, 37)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(backButtonToHome)
-                .addGap(56, 56, 56))
+                .addGap(44, 44, 44))
         );
 
         pack();
@@ -211,10 +270,14 @@ public class SignUpPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Homepage;
+    private javax.swing.JButton Pandelitos;
+    private javax.swing.JButton Pandelitos1;
     private javax.swing.JButton backButtonToHome;
     private javax.swing.JLabel confirmedPasswordLabel;
     private javax.swing.JLabel emailLabel1;
     private javax.swing.JTextField emailTextBox;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JLabel passwordLabel;
