@@ -176,7 +176,7 @@ public class LogInPage extends javax.swing.JFrame {
             javax.swing.JFrame f =  new javax.swing.JFrame();
             javax.swing.JOptionPane.showMessageDialog(f,"no username");
         }
-        else if (password   .equals(""))
+        else if (password.equals(""))
         {
             javax.swing.JFrame f =  new javax.swing.JFrame();
             javax.swing.JOptionPane.showMessageDialog(f,"no password");

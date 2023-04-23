@@ -55,7 +55,6 @@ public class DeliveryAddress extends javax.swing.JFrame
         jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(950, 550));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -71,7 +70,6 @@ public class DeliveryAddress extends javax.swing.JFrame
         getContentPane().add(deliveryAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 350, -1));
 
         backButton.setText("Back");
-        backButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButtonActionPerformed(evt);
@@ -80,7 +78,6 @@ public class DeliveryAddress extends javax.swing.JFrame
         getContentPane().add(backButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 320, -1, -1));
 
         proceedToPayment.setText("Proceed");
-        proceedToPayment.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         proceedToPayment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 proceedToPaymentActionPerformed(evt);
@@ -104,8 +101,15 @@ public class DeliveryAddress extends javax.swing.JFrame
 
     private void proceedToPaymentActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_proceedToPaymentActionPerformed
     {//GEN-HEADEREND:event_proceedToPaymentActionPerformed
-        this.setVisible(false);
-        new PaymentPage().setVisible(true);
+        String address = deliveryAddress.getText();
+        
+        if (address.equals("")) {
+            javax.swing.JFrame f =  new javax.swing.JFrame();
+            javax.swing.JOptionPane.showMessageDialog(f, "Field is empty.");
+        } else {
+            this.setVisible(false);
+            new PaymentPage().setVisible(true);
+        }
     }//GEN-LAST:event_proceedToPaymentActionPerformed
 
     /**
