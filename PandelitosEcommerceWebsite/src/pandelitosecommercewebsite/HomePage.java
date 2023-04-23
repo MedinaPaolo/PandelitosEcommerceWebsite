@@ -27,6 +27,7 @@ public class HomePage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollBar1 = new javax.swing.JScrollBar();
         pandelitosLabelName = new javax.swing.JLabel();
         logInButtonInterface = new javax.swing.JButton();
         viewProductsButton = new javax.swing.JButton();
@@ -53,7 +54,7 @@ public class HomePage extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pandelitosecommercewebsite/pandelitos logo.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pandelitosecommercewebsite/logo.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -140,6 +141,7 @@ public class HomePage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JButton logInButtonInterface;
     private javax.swing.JLabel pandelitosLabelName;
     private javax.swing.JButton viewProductsButton;
