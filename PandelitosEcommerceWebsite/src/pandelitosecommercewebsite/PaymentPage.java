@@ -32,9 +32,10 @@ public class PaymentPage extends javax.swing.JFrame {
         codCheckBox = new javax.swing.JCheckBox();
         cardCheckBox = new javax.swing.JCheckBox();
         proceedButton = new javax.swing.JButton();
-        backButton = new java.awt.Button();
+        backButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(950, 550));
 
@@ -57,8 +58,8 @@ public class PaymentPage extends javax.swing.JFrame {
             }
         });
 
+        backButton.setText("Back");
         backButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        backButton.setLabel("back");
         backButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButtonActionPerformed(evt);
@@ -92,9 +93,9 @@ public class PaymentPage extends javax.swing.JFrame {
                 .addComponent(cardCheckBox)
                 .addGap(30, 30, 30)
                 .addComponent(proceedButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(217, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(backButton)
+                .addContainerGap(210, Short.MAX_VALUE))
         );
 
         pack();
@@ -162,7 +163,7 @@ public class PaymentPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private java.awt.Button backButton;
+    private javax.swing.JButton backButton;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JCheckBox cardCheckBox;
     private javax.swing.JCheckBox codCheckBox;

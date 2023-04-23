@@ -36,13 +36,13 @@ public class PaymentMethodCard extends javax.swing.JFrame {
         cvcField = new javax.swing.JTextField();
         cardholderNameField = new javax.swing.JTextField();
         confirmButton = new javax.swing.JButton();
-        backButton = new java.awt.Button();
         cardNumberLabel = new javax.swing.JLabel();
         cnNeedsToBeNumberLabel = new javax.swing.JLabel();
         cvcNeedsToBeLettersLabel = new javax.swing.JLabel();
         expDateField = new javax.swing.JFormattedTextField();
         dateNeedsToBeValidLabel = new javax.swing.JLabel();
         chNeedsToBeLetterLabel = new javax.swing.JLabel();
+        backButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -86,14 +86,6 @@ public class PaymentMethodCard extends javax.swing.JFrame {
             }
         });
 
-        backButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        backButton.setLabel("back");
-        backButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backButtonActionPerformed(evt);
-            }
-        });
-
         cardNumberLabel.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         cardNumberLabel.setText("Bank Card Number");
 
@@ -115,6 +107,14 @@ public class PaymentMethodCard extends javax.swing.JFrame {
 
         chNeedsToBeLetterLabel.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         chNeedsToBeLetterLabel.setForeground(new java.awt.Color(255, 0, 0));
+
+        backButton.setText("Back");
+        backButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -185,19 +185,13 @@ public class PaymentMethodCard extends javax.swing.JFrame {
                     .addComponent(dateNeedsToBeValidLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(45, 45, 45)
                 .addComponent(confirmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(104, 104, 104))
+                .addGap(18, 18, 18)
+                .addComponent(backButton)
+                .addGap(97, 97, 97))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
-        // TODO add your handling code here:
-        this.setVisible(false);
-        new PaymentPage().setVisible(true);
-    }//GEN-LAST:event_backButtonActionPerformed
 
     private void cardNumberFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cardNumberFieldKeyPressed
         // TODO add your handling code here:
@@ -270,6 +264,12 @@ public class PaymentMethodCard extends javax.swing.JFrame {
             cvcNeedsToBeLettersLabel.setText("Invalid CVV/CVC. Must be a 3 or 4-digit number.");
         }
     }//GEN-LAST:event_confirmButtonActionPerformed
+
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new PaymentPage().setVisible(true);
+    }//GEN-LAST:event_backButtonActionPerformed
     
     /**
      * @param args the command line arguments
@@ -308,7 +308,7 @@ public class PaymentMethodCard extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private java.awt.Button backButton;
+    private javax.swing.JButton backButton;
     private javax.swing.JTextField cardNumberField;
     private javax.swing.JLabel cardNumberLabel;
     private javax.swing.JTextField cardholderNameField;
