@@ -33,7 +33,6 @@ public class HomePage extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(950, 550));
 
         pandelitosLabelName.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
         pandelitosLabelName.setText("Welcome to Pandelitos!");
@@ -87,7 +86,7 @@ public class HomePage extends javax.swing.JFrame {
                         .addComponent(jLabel1)))
                 .addGap(18, 18, 18)
                 .addComponent(pandelitosLabelName)
-                .addContainerGap(155, Short.MAX_VALUE))
+                .addContainerGap(101, Short.MAX_VALUE))
         );
 
         pack();
