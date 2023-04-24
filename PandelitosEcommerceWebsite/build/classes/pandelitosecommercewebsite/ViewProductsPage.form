@@ -32,7 +32,7 @@
                           <Group type="102" attributes="0">
                               <Component id="Product1" min="-2" pref="150" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
-                              <Component id="Product3" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="Product2" min="-2" pref="150" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
@@ -44,7 +44,7 @@
                       <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                          <Component id="Product2" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Component id="Product3" min="-2" pref="150" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -64,8 +64,8 @@
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="Product3" min="-2" pref="150" max="-2" attributes="0"/>
                   <Component id="Product2" min="-2" pref="150" max="-2" attributes="0"/>
+                  <Component id="Product3" min="-2" pref="150" max="-2" attributes="0"/>
                   <Component id="Product1" min="-2" pref="150" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -93,7 +93,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Product1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Product2">
+    <Component class="javax.swing.JButton" name="Product3">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/pandelitosecommercewebsite/Images/SmallEnsaymada.jpg"/>
@@ -103,10 +103,10 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Product2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Product3ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="Product3">
+    <Component class="javax.swing.JButton" name="Product2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/pandelitosecommercewebsite/Images/SmallSpanishBread.jpg"/>
@@ -116,7 +116,7 @@
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Product3ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Product2ActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">

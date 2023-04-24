@@ -4,18 +4,27 @@
  */
 package pandelitosecommercewebsite;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
+
 /**
  *
- * @author lloyd
+ * @author Paolo
  */
-public class ViewProductsPage extends javax.swing.JFrame {
+public class ProductInformation3 extends javax.swing.JFrame
+{
 
     /**
-     * Creates new form ViewProductsPage
+     * Creates new form ProductInformation3
      */
-    public ViewProductsPage() {
+    public ProductInformation3()
+    {
         initComponents();
-        setTitle("View Products");
+        setTitle("Product Information");
+        ImageIcon icon = new ImageIcon(getClass().getResource("/pandelitosecommercewebsite/Images/Ensaymada.jpg"));
+        Image newImage = (icon).getImage().getScaledInstance(productImage.getWidth(), productImage.getHeight(), Image.SCALE_SMOOTH);
+        icon = new ImageIcon(newImage);
+        productImage.setIcon(icon);
     }
 
     /**
@@ -28,68 +37,54 @@ public class ViewProductsPage extends javax.swing.JFrame {
     private void initComponents()
     {
 
-        Product1 = new javax.swing.JButton();
-        Product3 = new javax.swing.JButton();
-        Product2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        productName = new javax.swing.JLabel();
+        productDescription = new javax.swing.JLabel();
+        addToCart = new javax.swing.JButton();
+        productPrice = new javax.swing.JLabel();
+        productImage = new javax.swing.JLabel();
+        backButton = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        goToCart = new javax.swing.JButton();
         Homepage = new javax.swing.JButton();
         Pandelitos = new javax.swing.JButton();
         Pandelitos1 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        goToCart = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(950, 550));
+        setMinimumSize(new java.awt.Dimension(550, 550));
+        setPreferredSize(new java.awt.Dimension(950, 550));
 
-        Product1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pandelitosecommercewebsite/Images/SmallPandesal.jpg"))); // NOI18N
-        Product1.addActionListener(new java.awt.event.ActionListener()
+        productName.setFont(new java.awt.Font("Serif", 1, 36)); // NOI18N
+        productName.setText("Ensaymada");
+
+        productDescription.setFont(new java.awt.Font("Serif", 0, 18)); // NOI18N
+        productDescription.setText("A soft bun covered in butter and sugar and then topped with cheese. ");
+
+        addToCart.setText("Add to Cart");
+        addToCart.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        addToCart.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                Product1ActionPerformed(evt);
+                addToCartActionPerformed(evt);
             }
         });
 
-        Product3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pandelitosecommercewebsite/Images/SmallEnsaymada.jpg"))); // NOI18N
-        Product3.addActionListener(new java.awt.event.ActionListener()
+        productPrice.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        productPrice.setText("₱ 10.00 per piece");
+
+        productImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        backButton.setText("Back");
+        backButton.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
             {
-                Product3ActionPerformed(evt);
+                backButtonActionPerformed(evt);
             }
         });
-
-        Product2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pandelitosecommercewebsite/Images/SmallSpanishBread.jpg"))); // NOI18N
-        Product2.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                Product2ActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setFont(new java.awt.Font("Serif", 0, 36)); // NOI18N
-        jLabel1.setText("Products:");
-
-        jLabel2.setFont(new java.awt.Font("Serif", 0, 36)); // NOI18N
-        jLabel2.setText("Spanish Bread");
-
-        jLabel3.setFont(new java.awt.Font("Serif", 0, 36)); // NOI18N
-        jLabel3.setText("Ensaymada");
 
         jPanel1.setBackground(new java.awt.Color(255, 144, 0));
-
-        goToCart.setText("Go to Cart");
-        goToCart.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        goToCart.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                goToCartActionPerformed(evt);
-            }
-        });
 
         Homepage.setBackground(new java.awt.Color(255, 144, 0));
         Homepage.setForeground(new java.awt.Color(255, 144, 0));
@@ -138,6 +133,16 @@ public class ViewProductsPage extends javax.swing.JFrame {
             }
         });
 
+        goToCart.setText("Go to Cart");
+        goToCart.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        goToCart.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                goToCartActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -149,12 +154,12 @@ public class ViewProductsPage extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(Pandelitos1)
-                        .addContainerGap(575, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(Pandelitos)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 523, Short.MAX_VALUE)
                         .addComponent(goToCart)
-                        .addGap(48, 48, 48))))
+                        .addGap(55, 55, 55))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,86 +174,62 @@ public class ViewProductsPage extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel4.setFont(new java.awt.Font("Serif", 0, 36)); // NOI18N
-        jLabel4.setText("Pandesal");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(145, 145, 145)
+                        .addGap(70, 70, 70)
+                        .addComponent(productImage, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Product1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(110, 110, 110)
-                                .addComponent(Product2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addComponent(jLabel4)
-                                .addGap(95, 95, 95)
-                                .addComponent(jLabel2)))
-                        .addGap(76, 76, 76)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(Product3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(productName)
+                            .addComponent(productDescription)
+                            .addComponent(productPrice)
+                            .addComponent(addToCart)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(83, 83, 83)
-                        .addComponent(jLabel1)))
-                .addContainerGap(129, Short.MAX_VALUE))
+                        .addGap(780, 780, 780)
+                        .addComponent(backButton))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
-                .addComponent(jLabel1)
-                .addGap(44, 44, 44)
+                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Product2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Product3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Product1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4))
-                .addContainerGap(111, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(productImage, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(productName, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20)
+                        .addComponent(productDescription)
+                        .addGap(96, 96, 96)
+                        .addComponent(productPrice)
+                        .addGap(31, 31, 31)
+                        .addComponent(addToCart)))
+                .addGap(10, 10, 10)
+                .addComponent(backButton)
+                .addGap(0, 95, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void goToCartActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_goToCartActionPerformed
-    {//GEN-HEADEREND:event_goToCartActionPerformed
-        this.setVisible(false);
-        new Cart().setVisible(true);
-    }//GEN-LAST:event_goToCartActionPerformed
-
-    private void Product1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_Product1ActionPerformed
-    {//GEN-HEADEREND:event_Product1ActionPerformed
+    private void addToCartActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_addToCartActionPerformed
+    {//GEN-HEADEREND:event_addToCartActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
-        new ProductInformation1().setVisible(true);
-    }//GEN-LAST:event_Product1ActionPerformed
+    }//GEN-LAST:event_addToCartActionPerformed
 
-    private void Product3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_Product3ActionPerformed
-    {//GEN-HEADEREND:event_Product3ActionPerformed
-        // TODO add your handling code here:
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_backButtonActionPerformed
+    {//GEN-HEADEREND:event_backButtonActionPerformed
         this.setVisible(false);
-        new ProductInformation3().setVisible(true);
-        
-    }//GEN-LAST:event_Product3ActionPerformed
-
-    private void Product2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_Product2ActionPerformed
-    {//GEN-HEADEREND:event_Product2ActionPerformed
-        // TODO add your handling code here:
-        this.setVisible(false);
-        new ProductInformation2().setVisible(true);
-    }//GEN-LAST:event_Product2ActionPerformed
+        new ViewProductsPage().setVisible(true);
+    }//GEN-LAST:event_backButtonActionPerformed
 
     private void HomepageActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_HomepageActionPerformed
     {//GEN-HEADEREND:event_HomepageActionPerformed
@@ -265,37 +246,53 @@ public class ViewProductsPage extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Pandelitos1ActionPerformed
 
+    private void goToCartActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_goToCartActionPerformed
+    {//GEN-HEADEREND:event_goToCartActionPerformed
+        this.setVisible(false);
+        new Cart().setVisible(true);
+    }//GEN-LAST:event_goToCartActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String args[])
+    {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+        try
+        {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels())
+            {
+                if ("Nimbus".equals(info.getName()))
+                {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ViewProductsPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ViewProductsPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ViewProductsPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ViewProductsPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex)
+        {
+            java.util.logging.Logger.getLogger(ProductInformation3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex)
+        {
+            java.util.logging.Logger.getLogger(ProductInformation3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex)
+        {
+            java.util.logging.Logger.getLogger(ProductInformation3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex)
+        {
+            java.util.logging.Logger.getLogger(ProductInformation3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ViewProductsPage().setVisible(true);
+        java.awt.EventQueue.invokeLater(new Runnable()
+        {
+            public void run()
+            {
+                new ProductInformation3().setVisible(true);
             }
         });
     }
@@ -304,14 +301,13 @@ public class ViewProductsPage extends javax.swing.JFrame {
     private javax.swing.JButton Homepage;
     private javax.swing.JButton Pandelitos;
     private javax.swing.JButton Pandelitos1;
-    private javax.swing.JButton Product1;
-    private javax.swing.JButton Product2;
-    private javax.swing.JButton Product3;
+    private javax.swing.JButton addToCart;
+    private javax.swing.JButton backButton;
     private javax.swing.JButton goToCart;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel productDescription;
+    private javax.swing.JLabel productImage;
+    private javax.swing.JLabel productName;
+    private javax.swing.JLabel productPrice;
     // End of variables declaration//GEN-END:variables
 }
