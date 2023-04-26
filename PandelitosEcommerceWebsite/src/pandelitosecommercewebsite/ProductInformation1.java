@@ -51,6 +51,8 @@ public class ProductInformation1 extends javax.swing.JFrame
         Pandelitos = new javax.swing.JButton();
         Pandelitos1 = new javax.swing.JButton();
         goToCart = new javax.swing.JButton();
+        productAmount = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         jInternalFrame1.setVisible(true);
 
@@ -66,9 +68,7 @@ public class ProductInformation1 extends javax.swing.JFrame
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(950, 950));
         setMinimumSize(new java.awt.Dimension(950, 550));
-        setPreferredSize(new java.awt.Dimension(950, 550));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         productName.setFont(new java.awt.Font("Serif", 1, 36)); // NOI18N
@@ -88,7 +88,7 @@ public class ProductInformation1 extends javax.swing.JFrame
                 addToCartActionPerformed(evt);
             }
         });
-        getContentPane().add(addToCart, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 370, -1, -1));
+        getContentPane().add(addToCart, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 420, -1, -1));
 
         productPrice.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
         productPrice.setText("₱ 3.00 per piece");
@@ -199,12 +199,31 @@ public class ProductInformation1 extends javax.swing.JFrame
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        productAmount.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                productAmountActionPerformed(evt);
+            }
+        });
+        getContentPane().add(productAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 370, 90, 40));
+
+        jLabel1.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        jLabel1.setText("Amount:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 350, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void addToCartActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_addToCartActionPerformed
     {//GEN-HEADEREND:event_addToCartActionPerformed
         // TODO add your handling code here:
+        int productAmount = Integer.parseInt(this.productAmount.getText());
+        String productName = "Pandesal";
+        double productPrice = 3.00;
+        
+        CartItem newItem = new CartItem(productName, productPrice, productAmount);
+        Cart.products.add(newItem);
     }//GEN-LAST:event_addToCartActionPerformed
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_backButtonActionPerformed
@@ -233,6 +252,11 @@ public class ProductInformation1 extends javax.swing.JFrame
     {//GEN-HEADEREND:event_Pandelitos1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Pandelitos1ActionPerformed
+
+    private void productAmountActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_productAmountActionPerformed
+    {//GEN-HEADEREND:event_productAmountActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_productAmountActionPerformed
 
     /**
      * @param args the command line arguments
@@ -288,7 +312,9 @@ public class ProductInformation1 extends javax.swing.JFrame
     private javax.swing.JButton backButton;
     private javax.swing.JButton goToCart;
     private javax.swing.JInternalFrame jInternalFrame1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField productAmount;
     private javax.swing.JLabel productDescription;
     private javax.swing.JLabel productImage;
     private javax.swing.JLabel productName;

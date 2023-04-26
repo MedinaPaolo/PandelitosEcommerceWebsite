@@ -4,6 +4,9 @@
  */
 package pandelitosecommercewebsite;
 
+import java.util.LinkedList;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Paolo
@@ -14,12 +17,18 @@ public class Cart extends javax.swing.JFrame
     /**
      * Creates new form Cart
      */
+    public static LinkedList<CartItem> products = new LinkedList<>();
+    
     public Cart()
     {
         initComponents();
         setTitle("Cart");
+        DefaultTableModel model = (DefaultTableModel)TableProductsInCart.getModel();
+        for (CartItem product : products)
+        {
+            model.addRow(new Object[]{product.productName, product.productAmount,"P " + product.productPrice * product.productAmount});
+        }
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,34 +36,41 @@ public class Cart extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    private void initComponents()
+    {
 
         productName1 = new javax.swing.JLabel();
         removeFromCart1 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         backButton = new javax.swing.JButton();
         totalPrice = new javax.swing.JLabel();
         toCheckout = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jPanel2 = new javax.swing.JPanel();
-        productName2 = new javax.swing.JLabel();
-        productImage1 = new javax.swing.JLabel();
-        productAmount1 = new javax.swing.JLabel();
-        productPrice1 = new javax.swing.JLabel();
-        removeFromCart2 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        productName = new javax.swing.JLabel();
-        productImage = new javax.swing.JLabel();
-        productAmount = new javax.swing.JLabel();
-        productPrice = new javax.swing.JLabel();
-        removeFromCart = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         Pandelitos1 = new javax.swing.JButton();
         Homepage = new javax.swing.JButton();
         Pandelitos = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        TableProductsInCart = new javax.swing.JTable();
 
         productName1.setText("ProductName");
 
         removeFromCart1.setText("RemoveFromCart");
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][]
+            {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String []
+            {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -63,130 +79,29 @@ public class Cart extends javax.swing.JFrame
 
         backButton.setText("Back");
         backButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        backButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        backButton.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 backButtonActionPerformed(evt);
             }
         });
         getContentPane().add(backButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 500, -1, -1));
 
         totalPrice.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
-        totalPrice.setText("TotalPrice");
+        totalPrice.setText("Total: ");
         getContentPane().add(totalPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 460, -1, -1));
 
         toCheckout.setText("Proceed To Checkout");
         toCheckout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        toCheckout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
+        toCheckout.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
                 toCheckoutActionPerformed(evt);
             }
         });
         getContentPane().add(toCheckout, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 500, -1, -1));
-
-        productName2.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
-        productName2.setText("ProductName");
-
-        productImage1.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
-        productImage1.setText("ProductImage");
-
-        productAmount1.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
-        productAmount1.setText("ProductAmount");
-
-        productPrice1.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
-        productPrice1.setText("ProductPrice");
-
-        removeFromCart2.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
-        removeFromCart2.setText("RemoveFromCart");
-
-        productName.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
-        productName.setText("ProductName");
-
-        productImage.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
-        productImage.setText("ProductImage");
-
-        productAmount.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
-        productAmount.setText("ProductAmount");
-
-        productPrice.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
-        productPrice.setText("ProductPrice");
-
-        removeFromCart.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
-        removeFromCart.setText("RemoveFromCart");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addComponent(productImage)
-                .addGap(76, 76, 76)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(removeFromCart)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(productName)
-                        .addGap(52, 52, 52)
-                        .addComponent(productAmount)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
-                        .addComponent(productPrice)
-                        .addGap(30, 30, 30))))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(productName)
-                    .addComponent(productImage)
-                    .addComponent(productAmount)
-                    .addComponent(productPrice))
-                .addGap(18, 18, 18)
-                .addComponent(removeFromCart)
-                .addContainerGap(30, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addComponent(productImage1)
-                .addGap(76, 76, 76)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(removeFromCart2)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(productName2)
-                        .addGap(52, 52, 52)
-                        .addComponent(productAmount1)
-                        .addGap(56, 56, 56)
-                        .addComponent(productPrice1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 24, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(productName2)
-                    .addComponent(productImage1)
-                    .addComponent(productAmount1)
-                    .addComponent(productPrice1))
-                .addGap(18, 18, 18)
-                .addComponent(removeFromCart2)
-                .addGap(38, 38, 38)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(155, Short.MAX_VALUE))
-        );
-
-        jScrollPane1.setViewportView(jPanel2);
-
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 560, 320));
 
         jPanel3.setBackground(new java.awt.Color(255, 144, 0));
 
@@ -241,6 +156,20 @@ public class Cart extends javax.swing.JFrame
         );
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, -1));
+
+        TableProductsInCart.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][]
+            {
+
+            },
+            new String []
+            {
+                "Product Name", "Product Amount", "Product Price"
+            }
+        ));
+        jScrollPane4.setViewportView(TableProductsInCart);
+
+        getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 540, 300));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -306,23 +235,14 @@ public class Cart extends javax.swing.JFrame
     private javax.swing.JButton Homepage;
     private javax.swing.JButton Pandelitos;
     private javax.swing.JButton Pandelitos1;
+    private javax.swing.JTable TableProductsInCart;
     private javax.swing.JButton backButton;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel productAmount;
-    private javax.swing.JLabel productAmount1;
-    private javax.swing.JLabel productImage;
-    private javax.swing.JLabel productImage1;
-    private javax.swing.JLabel productName;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JTable jTable1;
     private javax.swing.JLabel productName1;
-    private javax.swing.JLabel productName2;
-    private javax.swing.JLabel productPrice;
-    private javax.swing.JLabel productPrice1;
-    private javax.swing.JLabel removeFromCart;
     private javax.swing.JLabel removeFromCart1;
-    private javax.swing.JLabel removeFromCart2;
     private javax.swing.JButton toCheckout;
     private javax.swing.JLabel totalPrice;
     // End of variables declaration//GEN-END:variables

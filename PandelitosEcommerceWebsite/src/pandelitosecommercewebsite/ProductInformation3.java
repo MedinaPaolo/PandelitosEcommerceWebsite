@@ -48,11 +48,11 @@ public class ProductInformation3 extends javax.swing.JFrame
         Pandelitos = new javax.swing.JButton();
         Pandelitos1 = new javax.swing.JButton();
         goToCart = new javax.swing.JButton();
+        productAmount = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(950, 550));
         setMinimumSize(new java.awt.Dimension(550, 550));
-        setPreferredSize(new java.awt.Dimension(950, 550));
 
         productName.setFont(new java.awt.Font("Serif", 1, 36)); // NOI18N
         productName.setText("Ensaymada");
@@ -174,6 +174,17 @@ public class ProductInformation3 extends javax.swing.JFrame
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        productAmount.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                productAmountActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        jLabel1.setText("Amount:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -185,15 +196,21 @@ public class ProductInformation3 extends javax.swing.JFrame
                     .addGroup(layout.createSequentialGroup()
                         .addGap(70, 70, 70)
                         .addComponent(productImage, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(productName)
-                            .addComponent(productDescription)
-                            .addComponent(productPrice)
-                            .addComponent(addToCart)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(780, 780, 780)
-                        .addComponent(backButton))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(productName)
+                                    .addComponent(productDescription)
+                                    .addComponent(productPrice)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(productAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(addToCart))
+                                .addGap(302, 302, 302)
+                                .addComponent(backButton))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -203,17 +220,21 @@ public class ProductInformation3 extends javax.swing.JFrame
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(productImage, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(productImage, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(backButton))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(productName, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(20, 20, 20)
                         .addComponent(productDescription)
                         .addGap(96, 96, 96)
                         .addComponent(productPrice)
-                        .addGap(31, 31, 31)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel1)
+                        .addGap(1, 1, 1)
+                        .addComponent(productAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(addToCart)))
-                .addGap(10, 10, 10)
-                .addComponent(backButton)
                 .addGap(0, 95, Short.MAX_VALUE))
         );
 
@@ -223,6 +244,12 @@ public class ProductInformation3 extends javax.swing.JFrame
     private void addToCartActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_addToCartActionPerformed
     {//GEN-HEADEREND:event_addToCartActionPerformed
         // TODO add your handling code here:
+        int productAmount = Integer.parseInt(this.productAmount.getText());
+        String productName = "Ensaymada";
+        double productPrice = 10.00;
+        
+        CartItem newItem = new CartItem(productName, productPrice, productAmount);
+        Cart.products.add(newItem);
     }//GEN-LAST:event_addToCartActionPerformed
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_backButtonActionPerformed
@@ -251,6 +278,11 @@ public class ProductInformation3 extends javax.swing.JFrame
         this.setVisible(false);
         new Cart().setVisible(true);
     }//GEN-LAST:event_goToCartActionPerformed
+
+    private void productAmountActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_productAmountActionPerformed
+    {//GEN-HEADEREND:event_productAmountActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_productAmountActionPerformed
 
     /**
      * @param args the command line arguments
@@ -304,7 +336,9 @@ public class ProductInformation3 extends javax.swing.JFrame
     private javax.swing.JButton addToCart;
     private javax.swing.JButton backButton;
     private javax.swing.JButton goToCart;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField productAmount;
     private javax.swing.JLabel productDescription;
     private javax.swing.JLabel productImage;
     private javax.swing.JLabel productName;
