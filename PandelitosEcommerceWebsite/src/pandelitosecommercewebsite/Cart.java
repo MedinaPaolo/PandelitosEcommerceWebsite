@@ -28,6 +28,19 @@ public class Cart extends javax.swing.JFrame
         {
             model.addRow(new Object[]{product.productName, product.productAmount,"P " + product.productPrice * product.productAmount});
         }
+        getTotal();
+    }
+    
+    public void getTotal()
+    {
+        double totalPrice = 0;
+        
+        for (CartItem product : products)
+        {
+            double temp = product.productAmount * product.productPrice;
+            totalPrice += temp;
+        }
+        total.setText("Total Price: P " + totalPrice);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -44,7 +57,7 @@ public class Cart extends javax.swing.JFrame
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         backButton = new javax.swing.JButton();
-        totalPrice = new javax.swing.JLabel();
+        total = new javax.swing.JLabel();
         toCheckout = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         Pandelitos1 = new javax.swing.JButton();
@@ -73,6 +86,8 @@ public class Cart extends javax.swing.JFrame
         jScrollPane2.setViewportView(jTable1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(950, 550));
+        setMinimumSize(new java.awt.Dimension(950, 550));
         setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(950, 550));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -86,11 +101,11 @@ public class Cart extends javax.swing.JFrame
                 backButtonActionPerformed(evt);
             }
         });
-        getContentPane().add(backButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 500, -1, -1));
+        getContentPane().add(backButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 460, -1, -1));
 
-        totalPrice.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
-        totalPrice.setText("Total: ");
-        getContentPane().add(totalPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 460, -1, -1));
+        total.setFont(new java.awt.Font("Serif", 0, 18)); // NOI18N
+        total.setText("Total price");
+        getContentPane().add(total, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 390, 160, -1));
 
         toCheckout.setText("Proceed To Checkout");
         toCheckout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -101,7 +116,7 @@ public class Cart extends javax.swing.JFrame
                 toCheckoutActionPerformed(evt);
             }
         });
-        getContentPane().add(toCheckout, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 500, -1, -1));
+        getContentPane().add(toCheckout, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 460, -1, -1));
 
         jPanel3.setBackground(new java.awt.Color(255, 144, 0));
 
@@ -169,7 +184,7 @@ public class Cart extends javax.swing.JFrame
         ));
         jScrollPane4.setViewportView(TableProductsInCart);
 
-        getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 540, 300));
+        getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, 540, 210));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -244,6 +259,6 @@ public class Cart extends javax.swing.JFrame
     private javax.swing.JLabel productName1;
     private javax.swing.JLabel removeFromCart1;
     private javax.swing.JButton toCheckout;
-    private javax.swing.JLabel totalPrice;
+    private javax.swing.JLabel total;
     // End of variables declaration//GEN-END:variables
 }
