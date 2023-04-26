@@ -36,8 +36,7 @@ public class Cart extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         productName1 = new javax.swing.JLabel();
         removeFromCart1 = new javax.swing.JLabel();
@@ -58,15 +57,13 @@ public class Cart extends javax.swing.JFrame
         removeFromCart1.setText("RemoveFromCart");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][]
-            {
+            new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null},
                 {null, null, null, null}
             },
-            new String []
-            {
+            new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
@@ -79,10 +76,8 @@ public class Cart extends javax.swing.JFrame
 
         backButton.setText("Back");
         backButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        backButton.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButtonActionPerformed(evt);
             }
         });
@@ -94,10 +89,8 @@ public class Cart extends javax.swing.JFrame
 
         toCheckout.setText("Proceed To Checkout");
         toCheckout.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        toCheckout.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        toCheckout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 toCheckoutActionPerformed(evt);
             }
         });
@@ -158,12 +151,10 @@ public class Cart extends javax.swing.JFrame
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, -1));
 
         TableProductsInCart.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][]
-            {
+            new Object [][] {
 
             },
-            new String []
-            {
+            new String [] {
                 "Product Name", "Product Amount", "Product Price"
             }
         ));
