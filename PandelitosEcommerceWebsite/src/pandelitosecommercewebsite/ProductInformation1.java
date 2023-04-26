@@ -224,6 +224,9 @@ public class ProductInformation1 extends javax.swing.JFrame
         
         CartItem newItem = new CartItem(productName, productPrice, productAmount);
         Cart.products.add(newItem);
+        
+        javax.swing.JFrame f =  new javax.swing.JFrame();
+        javax.swing.JOptionPane.showMessageDialog(f, "Pandesal added to Cart.");
     }//GEN-LAST:event_addToCartActionPerformed
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_backButtonActionPerformed

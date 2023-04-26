@@ -34,8 +34,7 @@ public class ProductInformation2 extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         productName = new javax.swing.JLabel();
         productDescription = new javax.swing.JLabel();
@@ -64,10 +63,8 @@ public class ProductInformation2 extends javax.swing.JFrame
 
         addToCart.setText("Add to Cart");
         addToCart.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        addToCart.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        addToCart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addToCartActionPerformed(evt);
             }
         });
@@ -78,10 +75,8 @@ public class ProductInformation2 extends javax.swing.JFrame
         productImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         backButton.setText("Back");
-        backButton.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButtonActionPerformed(evt);
             }
         });
@@ -97,50 +92,40 @@ public class ProductInformation2 extends javax.swing.JFrame
         Homepage.setMaximumSize(new java.awt.Dimension(100, 100));
         Homepage.setMinimumSize(new java.awt.Dimension(100, 100));
         Homepage.setPreferredSize(new java.awt.Dimension(100, 100));
-        Homepage.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        Homepage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HomepageActionPerformed(evt);
             }
         });
 
         Pandelitos.setBackground(new java.awt.Color(255, 144, 0));
         Pandelitos.setFont(new java.awt.Font("Serif", 1, 28)); // NOI18N
-        Pandelitos.setForeground(new java.awt.Color(0, 0, 0));
         Pandelitos.setText("Pandelitos");
         Pandelitos.setBorder(null);
         Pandelitos.setBorderPainted(false);
         Pandelitos.setContentAreaFilled(false);
-        Pandelitos.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        Pandelitos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PandelitosActionPerformed(evt);
             }
         });
 
         Pandelitos1.setBackground(new java.awt.Color(255, 144, 0));
         Pandelitos1.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
-        Pandelitos1.setForeground(new java.awt.Color(0, 0, 0));
         Pandelitos1.setText("Freshly Baked Hand Rolled Pandesal");
         Pandelitos1.setBorder(null);
         Pandelitos1.setBorderPainted(false);
         Pandelitos1.setContentAreaFilled(false);
-        Pandelitos1.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        Pandelitos1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Pandelitos1ActionPerformed(evt);
             }
         });
 
         goToCart.setText("Go to Cart");
         goToCart.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        goToCart.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        goToCart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 goToCartActionPerformed(evt);
             }
         });
@@ -176,10 +161,8 @@ public class ProductInformation2 extends javax.swing.JFrame
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        productAmount.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        productAmount.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 productAmountActionPerformed(evt);
             }
         });
@@ -253,6 +236,9 @@ public class ProductInformation2 extends javax.swing.JFrame
         
         CartItem newItem = new CartItem(productName, productPrice, productAmount);
         Cart.products.add(newItem);
+        
+        javax.swing.JFrame f =  new javax.swing.JFrame();
+        javax.swing.JOptionPane.showMessageDialog(f, "Spanish Bread added to Cart.");
     }//GEN-LAST:event_addToCartActionPerformed
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_backButtonActionPerformed
