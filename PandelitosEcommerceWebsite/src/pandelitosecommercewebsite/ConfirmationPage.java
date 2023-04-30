@@ -4,6 +4,9 @@
  */
 package pandelitosecommercewebsite;
 
+import javax.swing.table.DefaultTableModel;
+import static pandelitosecommercewebsite.Cart.products;
+
 /**
  *
  * @author Noah Peñaranda
@@ -16,6 +19,21 @@ public class ConfirmationPage extends javax.swing.JFrame {
     public ConfirmationPage() {
         initComponents();
         setTitle("Purchase Completion");
+        
+        DefaultTableModel model = (DefaultTableModel)TableProductsInCart.getModel();
+        for (CartItem product : products)
+        {
+            model.addRow(new Object[]{product.productName, product.productAmount,"P " + product.productPrice * product.productAmount});
+        }
+        
+        double totalPrice = 0;
+        
+        for (CartItem product : products)
+        {
+            double temp = product.productAmount * product.productPrice;
+            totalPrice += temp;
+        }
+        totalPriceLabel.setText("Total Price: P " + totalPrice);
     }
 
     /**
@@ -33,17 +51,12 @@ public class ConfirmationPage extends javax.swing.JFrame {
         deliveryAddressLabel = new javax.swing.JLabel();
         purchaseConfirmedLabel1 = new javax.swing.JLabel();
         returnButton = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jPanel1 = new javax.swing.JPanel();
-        productImage = new javax.swing.JLabel();
-        productNameLabel = new javax.swing.JLabel();
-        amountLabel = new javax.swing.JLabel();
-        productPriceLabel = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         Pandelitos1 = new javax.swing.JButton();
         Homepage = new javax.swing.JButton();
         Pandelitos = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        TableProductsInCart = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -72,63 +85,6 @@ public class ConfirmationPage extends javax.swing.JFrame {
                 returnButtonActionPerformed(evt);
             }
         });
-
-        productImage.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
-        productImage.setText("Product");
-
-        productNameLabel.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
-        productNameLabel.setText("Product Name");
-
-        amountLabel.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
-        amountLabel.setText("Amount:");
-
-        productPriceLabel.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
-        productPriceLabel.setText("Product Price:");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(productImage, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(100, 100, 100)
-                .addComponent(productNameLabel)
-                .addGap(96, 96, 96)
-                .addComponent(amountLabel)
-                .addGap(91, 91, 91)
-                .addComponent(productPriceLabel)
-                .addContainerGap(129, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(productImage)
-                    .addComponent(productNameLabel)
-                    .addComponent(amountLabel)
-                    .addComponent(productPriceLabel))
-                .addContainerGap(184, Short.MAX_VALUE))
-        );
-
-        jScrollPane1.setViewportView(jPanel1);
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(160, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 624, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
 
         jPanel3.setBackground(new java.awt.Color(255, 144, 0));
 
@@ -182,56 +138,66 @@ public class ConfirmationPage extends javax.swing.JFrame {
                 .addGap(15, 15, 15))
         );
 
+        TableProductsInCart.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Product Name", "Product Amount", "Product Price"
+            }
+        ));
+        jScrollPane2.setViewportView(TableProductsInCart);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(162, 162, 162)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(productsPurchasedLabel)
+                    .addComponent(deliveryAddressLabel)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 619, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(104, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(returnButton)
-                        .addGap(32, 32, 32))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(purchaseConfirmedLabel1)
-                        .addGap(365, 365, 365))
+                        .addGap(364, 364, 364))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(thankYouLabel)
-                        .addGap(263, 263, 263))))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(603, 603, 603)
-                        .addComponent(totalPriceLabel))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(159, 159, 159)
-                        .addComponent(productsPurchasedLabel))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(162, 162, 162)
-                        .addComponent(deliveryAddressLabel)))
-                .addContainerGap(132, Short.MAX_VALUE))
+                        .addGap(154, 154, 154)
+                        .addComponent(returnButton)
+                        .addGap(52, 52, 52))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(totalPriceLabel)
+                .addGap(171, 171, 171))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addGap(31, 31, 31)
                 .addComponent(purchaseConfirmedLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addGap(11, 11, 11)
                 .addComponent(productsPurchasedLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(totalPriceLabel)
-                .addGap(7, 7, 7)
+                .addGap(4, 4, 4)
                 .addComponent(deliveryAddressLabel)
-                .addGap(38, 38, 38)
-                .addComponent(thankYouLabel)
-                .addGap(24, 24, 24)
-                .addComponent(returnButton)
-                .addGap(22, 22, 22))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(thankYouLabel)
+                        .addGap(70, 70, 70))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(returnButton)
+                        .addGap(51, 51, 51))))
         );
 
         pack();
@@ -282,15 +248,10 @@ public class ConfirmationPage extends javax.swing.JFrame {
     private javax.swing.JButton Homepage;
     private javax.swing.JButton Pandelitos;
     private javax.swing.JButton Pandelitos1;
-    private javax.swing.JLabel amountLabel;
+    private javax.swing.JTable TableProductsInCart;
     private javax.swing.JLabel deliveryAddressLabel;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel productImage;
-    private javax.swing.JLabel productNameLabel;
-    private javax.swing.JLabel productPriceLabel;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel productsPurchasedLabel;
     private javax.swing.JLabel purchaseConfirmedLabel1;
     private javax.swing.JButton returnButton;
