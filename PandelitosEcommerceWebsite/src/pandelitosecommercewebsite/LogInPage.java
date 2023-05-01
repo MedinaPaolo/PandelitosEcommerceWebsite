@@ -3,9 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package pandelitosecommercewebsite;
-
+import java.util.logging.Logger;
+import java.util.logging.Level;
 import javax.swing.JOptionPane;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  *
@@ -294,5 +298,25 @@ public class LogInPage extends javax.swing.JFrame {
     private void userLogin(String user, String pass) {
         Connection dbconnect = DBconnection.connectDB();
         
+        if(dbconnect != null){
+            try {
+                PreparedStatement st = (PreparedStatement)
+                        dbconnect.prepareStatement("Select * FROM pandelitosusers WHERE username = ? AND password = ?");
+                st.setString(1, user);
+                st.setString(2, pass);
+                ResultSet rs = st.executeQuery();
+                
+                    if(rs.next()){
+                        this.setVisible(false);
+                        new ViewProductsPage().setVisible(true);
+                    }else{
+                        JOptionPane.showMessageDialog(this, "Username or Password not found", "Warning", JOptionPane.ERROR_MESSAGE);
+                    }
+                }catch (SQLException ex) {
+                    Logger.getLogger(LogInPage.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }else{
+                System.out.println("The Connection is unavailable");
+            }
+       } 
     }
-}
