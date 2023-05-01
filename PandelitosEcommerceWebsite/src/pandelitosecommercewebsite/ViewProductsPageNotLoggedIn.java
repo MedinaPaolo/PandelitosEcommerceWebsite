@@ -11,11 +11,11 @@ package pandelitosecommercewebsite;
 public class ViewProductsPageNotLoggedIn extends javax.swing.JFrame {
 
     /**
-     * Creates new form ViewProductsPageNotLoggedIn
+     * Creates new form ViewProductsPage
      */
     public ViewProductsPageNotLoggedIn() {
         initComponents();
-        setTitle("View Products - Not Logged In");
+        setTitle("View Products");
     }
 
     /**
@@ -27,63 +27,247 @@ public class ViewProductsPageNotLoggedIn extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        redirectToLogInPage = new javax.swing.JButton();
-        backToMainButton = new javax.swing.JButton();
+        Product1 = new javax.swing.JButton();
+        Product3 = new javax.swing.JButton();
+        Product2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        loginButton = new javax.swing.JButton();
+        Homepage = new javax.swing.JButton();
+        Pandelitos = new javax.swing.JButton();
+        Pandelitos1 = new javax.swing.JButton();
+        homeButton = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(950, 550));
 
-        redirectToLogInPage.setText("Log In");
-        redirectToLogInPage.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        redirectToLogInPage.addActionListener(new java.awt.event.ActionListener() {
+        Product1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pandelitosecommercewebsite/Images/SmallPandesal.jpg"))); // NOI18N
+        Product1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Product1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                redirectToLogInPageActionPerformed(evt);
+                Product1ActionPerformed(evt);
             }
         });
 
-        backToMainButton.setText("Home");
-        backToMainButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        backToMainButton.addActionListener(new java.awt.event.ActionListener() {
+        Product3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pandelitosecommercewebsite/Images/SmallEnsaymada.jpg"))); // NOI18N
+        Product3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Product3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backToMainButtonActionPerformed(evt);
+                Product3ActionPerformed(evt);
             }
         });
+
+        Product2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pandelitosecommercewebsite/Images/SmallSpanishBread.jpg"))); // NOI18N
+        Product2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Product2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Product2ActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Serif", 0, 36)); // NOI18N
+        jLabel1.setText("Products:");
+
+        jLabel2.setFont(new java.awt.Font("Serif", 0, 36)); // NOI18N
+        jLabel2.setText("Spanish Bread");
+
+        jLabel3.setFont(new java.awt.Font("Serif", 0, 36)); // NOI18N
+        jLabel3.setText("Ensaymada");
+
+        jPanel1.setBackground(new java.awt.Color(255, 144, 0));
+
+        loginButton.setText("Log In");
+        loginButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        loginButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginButtonActionPerformed(evt);
+            }
+        });
+
+        Homepage.setBackground(new java.awt.Color(255, 144, 0));
+        Homepage.setForeground(new java.awt.Color(255, 144, 0));
+        Homepage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pandelitosecommercewebsite/Images/SmallPandelitos.jpg"))); // NOI18N
+        Homepage.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        Homepage.setBorderPainted(false);
+        Homepage.setContentAreaFilled(false);
+        Homepage.setMaximumSize(new java.awt.Dimension(100, 100));
+        Homepage.setMinimumSize(new java.awt.Dimension(100, 100));
+        Homepage.setPreferredSize(new java.awt.Dimension(100, 100));
+        Homepage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HomepageActionPerformed(evt);
+            }
+        });
+
+        Pandelitos.setBackground(new java.awt.Color(255, 144, 0));
+        Pandelitos.setFont(new java.awt.Font("Serif", 1, 28)); // NOI18N
+        Pandelitos.setText("Pandelitos");
+        Pandelitos.setBorder(null);
+        Pandelitos.setBorderPainted(false);
+        Pandelitos.setContentAreaFilled(false);
+        Pandelitos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PandelitosActionPerformed(evt);
+            }
+        });
+
+        Pandelitos1.setBackground(new java.awt.Color(255, 144, 0));
+        Pandelitos1.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
+        Pandelitos1.setText("Freshly Baked Hand Rolled Pandesal");
+        Pandelitos1.setBorder(null);
+        Pandelitos1.setBorderPainted(false);
+        Pandelitos1.setContentAreaFilled(false);
+        Pandelitos1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Pandelitos1ActionPerformed(evt);
+            }
+        });
+
+        homeButton.setText("Home");
+        homeButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        homeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                homeButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(Homepage, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(Pandelitos1)
+                        .addContainerGap(575, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(Pandelitos)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(homeButton)
+                        .addGap(32, 32, 32)
+                        .addComponent(loginButton)
+                        .addGap(48, 48, 48))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(Homepage, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Pandelitos)
+                    .addComponent(loginButton)
+                    .addComponent(homeButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Pandelitos1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel4.setFont(new java.awt.Font("Serif", 0, 36)); // NOI18N
+        jLabel4.setText("Pandesal");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(572, Short.MAX_VALUE)
-                .addComponent(backToMainButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(redirectToLogInPage)
-                .addGap(47, 47, 47))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(145, 145, 145)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Product1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(110, 110, 110)
+                                .addComponent(Product2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addComponent(jLabel4)
+                                .addGap(95, 95, 95)
+                                .addComponent(jLabel2)))
+                        .addGap(76, 76, 76)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(Product3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(83, 83, 83)
+                        .addComponent(jLabel1)))
+                .addContainerGap(129, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(redirectToLogInPage)
-                    .addComponent(backToMainButton))
-                .addContainerGap(407, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addComponent(jLabel1)
+                .addGap(44, 44, 44)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Product2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Product3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Product1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4))
+                .addContainerGap(111, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void redirectToLogInPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_redirectToLogInPageActionPerformed
-        // TODO add your handling code here:
+    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_loginButtonActionPerformed
+    {//GEN-HEADEREND:event_loginButtonActionPerformed
         this.setVisible(false);
         new LogInPage().setVisible(true);
-    }//GEN-LAST:event_redirectToLogInPageActionPerformed
+    }//GEN-LAST:event_loginButtonActionPerformed
 
-    private void backToMainButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backToMainButtonActionPerformed
+    private void Product1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_Product1ActionPerformed
+    {//GEN-HEADEREND:event_Product1ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new ProductInformation1NotLoggedIn().setVisible(true);
+    }//GEN-LAST:event_Product1ActionPerformed
+
+    private void Product3ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_Product3ActionPerformed
+    {//GEN-HEADEREND:event_Product3ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new ProductInformation3NotLoggedIn().setVisible(true);
+        
+    }//GEN-LAST:event_Product3ActionPerformed
+
+    private void Product2ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_Product2ActionPerformed
+    {//GEN-HEADEREND:event_Product2ActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        new ProductInformation2NotLoggedIn().setVisible(true);
+    }//GEN-LAST:event_Product2ActionPerformed
+
+    private void HomepageActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_HomepageActionPerformed
+    {//GEN-HEADEREND:event_HomepageActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_HomepageActionPerformed
+
+    private void PandelitosActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_PandelitosActionPerformed
+    {//GEN-HEADEREND:event_PandelitosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PandelitosActionPerformed
+
+    private void Pandelitos1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_Pandelitos1ActionPerformed
+    {//GEN-HEADEREND:event_Pandelitos1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Pandelitos1ActionPerformed
+
+    private void homeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButtonActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
         new HomePage().setVisible(true);
-    }//GEN-LAST:event_backToMainButtonActionPerformed
+    }//GEN-LAST:event_homeButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -102,26 +286,37 @@ public class ViewProductsPageNotLoggedIn extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ViewProductsPageNotLoggedIn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewProductsPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ViewProductsPageNotLoggedIn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewProductsPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ViewProductsPageNotLoggedIn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewProductsPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ViewProductsPageNotLoggedIn.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ViewProductsPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ViewProductsPageNotLoggedIn().setVisible(true);
+                new ViewProductsPage().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backToMainButton;
-    private javax.swing.JButton redirectToLogInPage;
+    private javax.swing.JButton Homepage;
+    private javax.swing.JButton Pandelitos;
+    private javax.swing.JButton Pandelitos1;
+    private javax.swing.JButton Product1;
+    private javax.swing.JButton Product2;
+    private javax.swing.JButton Product3;
+    private javax.swing.JButton homeButton;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton loginButton;
     // End of variables declaration//GEN-END:variables
 }
