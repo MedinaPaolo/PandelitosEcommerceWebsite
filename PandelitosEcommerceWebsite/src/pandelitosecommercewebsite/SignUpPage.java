@@ -4,6 +4,14 @@
  */
 package pandelitosecommercewebsite;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author lloyd
@@ -28,9 +36,7 @@ public class SignUpPage extends javax.swing.JFrame {
     private void initComponents() {
 
         passwordLabel = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        confirmedPasswordLabel = new javax.swing.JLabel();
-        jPasswordField2 = new javax.swing.JPasswordField();
+        passwordFieldbox = new javax.swing.JPasswordField();
         signUpConfirmationButton = new javax.swing.JButton();
         emailTextBox = new javax.swing.JTextField();
         userNameTextBox = new javax.swing.JTextField();
@@ -48,18 +54,9 @@ public class SignUpPage extends javax.swing.JFrame {
         passwordLabel.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
         passwordLabel.setText("Password");
 
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        passwordFieldbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
-            }
-        });
-
-        confirmedPasswordLabel.setFont(new java.awt.Font("Serif", 0, 14)); // NOI18N
-        confirmedPasswordLabel.setText("Confirm Password");
-
-        jPasswordField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField2ActionPerformed(evt);
+                passwordFieldboxActionPerformed(evt);
             }
         });
 
@@ -159,24 +156,21 @@ public class SignUpPage extends javax.swing.JFrame {
                 .addContainerGap(171, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(emailLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(emailTextBox)
-                                .addComponent(userNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(passwordLabel)
-                                .addComponent(jPasswordField2)
-                                .addComponent(confirmedPasswordLabel)
-                                .addComponent(userNameTextBox)
-                                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(signUpConfirmationButton)
-                                .addGap(105, 105, 105)))
-                        .addGap(343, 343, 343))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(backButtonToHome)
-                        .addGap(59, 59, 59))))
+                        .addGap(59, 59, 59))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(emailLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(emailTextBox)
+                            .addComponent(userNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(passwordLabel)
+                            .addComponent(userNameTextBox)
+                            .addComponent(passwordFieldbox, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(343, 343, 343))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(314, 314, 314)
+                .addComponent(signUpConfirmationButton)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -193,14 +187,10 @@ public class SignUpPage extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(passwordLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(confirmedPasswordLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(passwordFieldbox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(signUpConfirmationButton)
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                 .addComponent(backButtonToHome)
                 .addGap(44, 44, 44))
         );
@@ -208,16 +198,24 @@ public class SignUpPage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void passwordFieldboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordFieldboxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
-
-    private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField2ActionPerformed
+    }//GEN-LAST:event_passwordFieldboxActionPerformed
 
     private void signUpConfirmationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signUpConfirmationButtonActionPerformed
-        // TODO add your handling code here:
+        String email = emailTextBox.getText();
+        String uName = userNameTextBox.getText();
+        String pass = passwordFieldbox.getText();
+        
+        if (email.isEmpty() || uName.isEmpty() || pass.isEmpty())
+        {
+            JOptionPane.showMessageDialog(this, "Input is required to all text box", "Warning", JOptionPane.ERROR_MESSAGE);
+        }
+        else
+        {
+            userLogin(email, uName, pass);
+        }
+        
     }//GEN-LAST:event_signUpConfirmationButtonActionPerformed
 
     private void emailTextBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTextBoxActionPerformed
@@ -274,15 +272,35 @@ public class SignUpPage extends javax.swing.JFrame {
     private javax.swing.JButton Pandelitos;
     private javax.swing.JButton Pandelitos1;
     private javax.swing.JButton backButtonToHome;
-    private javax.swing.JLabel confirmedPasswordLabel;
     private javax.swing.JLabel emailLabel1;
     private javax.swing.JTextField emailTextBox;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
+    private javax.swing.JPasswordField passwordFieldbox;
     private javax.swing.JLabel passwordLabel;
     private javax.swing.JButton signUpConfirmationButton;
     private javax.swing.JLabel userNameLabel;
     private javax.swing.JTextField userNameTextBox;
     // End of variables declaration//GEN-END:variables
+
+    private void userLogin(String email, String uName, String pass) {
+        Connection dbconnect = DBconnection.connectDB();
+        
+        if(dbconnect != null){
+            try {
+                PreparedStatement st = (PreparedStatement)
+                        dbconnect.prepareStatement("INSERT INTO pandelitosusers (email, username, password) VALUES(?, ?, ?)");
+                
+                st.setString(1, email);
+                st.setString(2, uName);
+                st.setString(3, pass);
+                int rs = st.executeUpdate();
+                JOptionPane.showMessageDialog(this, "All credentials has been inserted", "Success", JOptionPane.INFORMATION_MESSAGE);
+                
+                }catch (SQLException ex) {
+                    Logger.getLogger(LogInPage.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                }else{
+                    System.out.println("The Connection is unavailable");
+                }
+    }
 }
