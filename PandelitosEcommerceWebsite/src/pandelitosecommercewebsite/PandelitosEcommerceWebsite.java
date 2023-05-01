@@ -24,7 +24,7 @@ public class PandelitosEcommerceWebsite
         PaymentPage p = new PaymentPage();
         PaymentMethodCard pc = new PaymentMethodCard();
         ConfirmationPage c = new ConfirmationPage();
-        h.show();
+        vp.show();
     }
     
 }

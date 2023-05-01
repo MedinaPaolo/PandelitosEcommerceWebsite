@@ -16,16 +16,19 @@ public class ConfirmationPage extends javax.swing.JFrame {
     /**
      * Creates new form ConfirmationPage
      */
+    
     public ConfirmationPage() {
         initComponents();
         setTitle("Purchase Completion");
         
+        //table
         DefaultTableModel model = (DefaultTableModel)TableProductsInCart.getModel();
         for (CartItem product : products)
         {
             model.addRow(new Object[]{product.productName, product.productAmount,"P " + product.productPrice * product.productAmount});
         }
         
+        //total price
         double totalPrice = 0;
         
         for (CartItem product : products)
@@ -34,8 +37,14 @@ public class ConfirmationPage extends javax.swing.JFrame {
             totalPrice += temp;
         }
         totalPriceLabel.setText("Total Price: P " + totalPrice);
+        
+        DeliveryAddressPage deliveryAddressPage = new DeliveryAddressPage();
+        String deliveryAddress = deliveryAddressPage.getDeliveryAddress();
+        
+        deliveryAddressLabel.setText("Delivery Address: " + deliveryAddress);
+        
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

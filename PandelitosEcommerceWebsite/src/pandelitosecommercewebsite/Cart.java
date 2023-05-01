@@ -189,7 +189,7 @@ public class Cart extends javax.swing.JFrame
     private void toCheckoutActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_toCheckoutActionPerformed
     {//GEN-HEADEREND:event_toCheckoutActionPerformed
         this.setVisible(false);
-        new DeliveryAddress().setVisible(true);
+        new DeliveryAddressPage().setVisible(true);
     }//GEN-LAST:event_toCheckoutActionPerformed
 
     /**

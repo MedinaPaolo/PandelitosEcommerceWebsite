@@ -4,22 +4,34 @@
  */
 package pandelitosecommercewebsite;
 
+import javax.swing.JTextField;
+
 /**
  *
  * @author Paolo
  */
-public class DeliveryAddress extends javax.swing.JFrame
+public class DeliveryAddressPage extends javax.swing.JFrame
 {
+    String address;
 
     /**
      * Creates new form DeliveryAddress
      */
-    public DeliveryAddress()
+    public DeliveryAddressPage()
     {
         initComponents();
         setTitle("Delivery Address");
     }
+    
+    public String getDeliveryAddress() 
+    {
+        return deliveryAddressText.getText();
+    }
 
+    public void setDeliveryAddress(JTextField deliveryAddressText) {
+        this.deliveryAddressText = deliveryAddressText;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -34,7 +46,7 @@ public class DeliveryAddress extends javax.swing.JFrame
         jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
         jLabel1 = new javax.swing.JLabel();
-        deliveryAddress = new javax.swing.JTextField();
+        deliveryAddressText = new javax.swing.JTextField();
         backButton = new javax.swing.JButton();
         proceedToPayment = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
@@ -66,12 +78,12 @@ public class DeliveryAddress extends javax.swing.JFrame
         jLabel1.setText("Enter Delivery Address");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, -1, -1));
 
-        deliveryAddress.addActionListener(new java.awt.event.ActionListener() {
+        deliveryAddressText.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deliveryAddressActionPerformed(evt);
+                deliveryAddressTextActionPerformed(evt);
             }
         });
-        getContentPane().add(deliveryAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 350, -1));
+        getContentPane().add(deliveryAddressText, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 350, -1));
 
         backButton.setText("Back");
         backButton.addActionListener(new java.awt.event.ActionListener() {
@@ -152,19 +164,20 @@ public class DeliveryAddress extends javax.swing.JFrame
         new Cart().setVisible(true);
     }//GEN-LAST:event_backButtonActionPerformed
 
-    private void deliveryAddressActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_deliveryAddressActionPerformed
-    {//GEN-HEADEREND:event_deliveryAddressActionPerformed
+    private void deliveryAddressTextActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_deliveryAddressTextActionPerformed
+    {//GEN-HEADEREND:event_deliveryAddressTextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_deliveryAddressActionPerformed
+    }//GEN-LAST:event_deliveryAddressTextActionPerformed
 
     private void proceedToPaymentActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_proceedToPaymentActionPerformed
     {//GEN-HEADEREND:event_proceedToPaymentActionPerformed
-        String address = deliveryAddress.getText();
+        String deliveryAddress = getDeliveryAddress();
         
-        if (address.equals("")) {
+        if (deliveryAddress.equals("")) {
             javax.swing.JFrame f =  new javax.swing.JFrame();
             javax.swing.JOptionPane.showMessageDialog(f, "Field is empty.");
         } else {
+            
             this.setVisible(false);
             new PaymentPage().setVisible(true);
         }
@@ -192,17 +205,18 @@ public class DeliveryAddress extends javax.swing.JFrame
             }
         } catch (ClassNotFoundException ex)
         {
-            java.util.logging.Logger.getLogger(DeliveryAddress.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DeliveryAddressPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex)
         {
-            java.util.logging.Logger.getLogger(DeliveryAddress.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DeliveryAddressPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex)
         {
-            java.util.logging.Logger.getLogger(DeliveryAddress.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DeliveryAddressPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex)
         {
-            java.util.logging.Logger.getLogger(DeliveryAddress.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DeliveryAddressPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
@@ -210,7 +224,7 @@ public class DeliveryAddress extends javax.swing.JFrame
         {
             public void run()
             {
-                new DeliveryAddress().setVisible(true);
+                new DeliveryAddressPage().setVisible(true);
             }
         });
     }
@@ -220,7 +234,7 @@ public class DeliveryAddress extends javax.swing.JFrame
     private javax.swing.JButton Pandelitos;
     private javax.swing.JButton Pandelitos1;
     private javax.swing.JButton backButton;
-    private javax.swing.JTextField deliveryAddress;
+    private javax.swing.JTextField deliveryAddressText;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
