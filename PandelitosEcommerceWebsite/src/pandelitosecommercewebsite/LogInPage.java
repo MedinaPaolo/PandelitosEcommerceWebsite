@@ -4,6 +4,9 @@
  */
 package pandelitosecommercewebsite;
 
+import javax.swing.JOptionPane;
+import java.sql.Connection;
+
 /**
  *
  * @author lloyd
@@ -212,39 +215,16 @@ public class LogInPage extends javax.swing.JFrame {
 
     private void logInButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logInButtonActionPerformed
         // TODO add your handling code here:
-        String accountUsername = "Lorenzo";
-        String accountPassword = "Lloyd";
+         String user = userNameInput.getText();
+        String pass = String.valueOf(passwordInput.getPassword());
 
-        String userName = userNameInput.getText();
-        String password = new String (passwordInput.getPassword());
-        System.out.println("Username: " + userName);
-        System.out.println("Password: " + password);
-
-        if (accountUsername.equals(userName) && accountPassword.equals(password))
+        if(user.isEmpty() || pass.isEmpty())
         {
-            System.out.println("Log In Successful");
-            this.setVisible(false);
-            new ViewProductsPage().setVisible(true);
-        }
-        else if (userName.equals("") && password.equals(""))
-        {
-            javax.swing.JFrame f =  new javax.swing.JFrame();
-            javax.swing.JOptionPane.showMessageDialog(f,"No Input in both field");
-        }
-        else if (userName.equals(""))
-        {
-            javax.swing.JFrame f =  new javax.swing.JFrame();
-            javax.swing.JOptionPane.showMessageDialog(f,"no username");
-        }
-        else if (password.equals(""))
-        {
-            javax.swing.JFrame f =  new javax.swing.JFrame();
-            javax.swing.JOptionPane.showMessageDialog(f,"no password");
+            JOptionPane.showMessageDialog(this, "Username / Password should not be empty ", "Error", JOptionPane.ERROR_MESSAGE);
         }
         else
         {
-            javax.swing.JFrame f =  new javax.swing.JFrame();
-            javax.swing.JOptionPane.showMessageDialog(f,"Log In Failed");
+            userLogin(user,pass);
         }
 
     }//GEN-LAST:event_logInButtonActionPerformed
@@ -310,4 +290,9 @@ public class LogInPage extends javax.swing.JFrame {
     private javax.swing.JTextField userNameInput;
     private javax.swing.JLabel userNameLabel;
     // End of variables declaration//GEN-END:variables
+
+    private void userLogin(String user, String pass) {
+        Connection dbconnect = DBconnection.connectDB();
+        
+    }
 }
