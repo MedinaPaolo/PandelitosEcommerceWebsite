@@ -4,7 +4,6 @@
  */
 package pandelitosecommercewebsite;
 
-import java.util.LinkedList;
 import javax.swing.table.DefaultTableModel;
 import static pandelitosecommercewebsite.Cart.products;
 
@@ -12,15 +11,11 @@ import static pandelitosecommercewebsite.Cart.products;
  *
  * @author Noah Peñaranda
  */
-
-
 public class ConfirmationPage extends javax.swing.JFrame {
 
     /**
      * Creates new form ConfirmationPage
      */
-    
-    public static LinkedList<DeliveryAddressPage> address = new LinkedList<>();
     
     public ConfirmationPage() {
         initComponents();
@@ -43,12 +38,11 @@ public class ConfirmationPage extends javax.swing.JFrame {
         }
         totalPriceLabel.setText("Total Price: P " + totalPrice);
         
+        DeliveryAddressPage deliveryAddressPage = new DeliveryAddressPage();
+        String deliveryAddress = deliveryAddressPage.getDeliveryAddress();
         
-        for (DeliveryAddressPage a : address)
-        {
-            deliveryAddressLabel.setText("Delivery Address: " + a.deliveryAddress);
-        }
-           
+        deliveryAddressLabel.setText("Delivery Address: " + deliveryAddress);
+        
     }
     
     /**

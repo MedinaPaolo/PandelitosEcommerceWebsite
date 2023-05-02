@@ -10,26 +10,19 @@ import javax.swing.JTextField;
  *
  * @author Paolo
  */
-
-
 public class DeliveryAddressPage extends javax.swing.JFrame
 {
+    String address;
+
     /**
      * Creates new form DeliveryAddress
      */
-    String deliveryAddress;
-
-    public DeliveryAddressPage(String deliveryAddress)
-    {
-        this.deliveryAddress = deliveryAddress;
-    }
-    
     public DeliveryAddressPage()
     {
         initComponents();
         setTitle("Delivery Address");
     }
-   
+    
     public String getDeliveryAddress() 
     {
         return deliveryAddressText.getText();
@@ -46,8 +39,7 @@ public class DeliveryAddressPage extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         jFileChooser1 = new javax.swing.JFileChooser();
         jDialog1 = new javax.swing.JDialog();
@@ -86,30 +78,24 @@ public class DeliveryAddressPage extends javax.swing.JFrame
         jLabel1.setText("Enter Delivery Address");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, -1, -1));
 
-        deliveryAddressText.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        deliveryAddressText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deliveryAddressTextActionPerformed(evt);
             }
         });
         getContentPane().add(deliveryAddressText, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 240, 350, -1));
 
         backButton.setText("Back");
-        backButton.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backButtonActionPerformed(evt);
             }
         });
         getContentPane().add(backButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 320, -1, -1));
 
         proceedToPayment.setText("Proceed");
-        proceedToPayment.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        proceedToPayment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 proceedToPaymentActionPerformed(evt);
             }
         });
@@ -185,9 +171,7 @@ public class DeliveryAddressPage extends javax.swing.JFrame
 
     private void proceedToPaymentActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_proceedToPaymentActionPerformed
     {//GEN-HEADEREND:event_proceedToPaymentActionPerformed
-        deliveryAddress = this.deliveryAddressText.getText();
-        DeliveryAddressPage a = new DeliveryAddressPage(deliveryAddress);
-        ConfirmationPage.address.add(a);
+        String deliveryAddress = getDeliveryAddress();
         
         if (deliveryAddress.equals("")) {
             javax.swing.JFrame f =  new javax.swing.JFrame();
