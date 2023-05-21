@@ -36,13 +36,7 @@ public class ConfirmationPage extends javax.swing.JFrame {
             double temp = product.productAmount * product.productPrice;
             totalPrice += temp;
         }
-        totalPriceLabel.setText("Total Price: P " + totalPrice);
-        
-        DeliveryAddressPage deliveryAddressPage = new DeliveryAddressPage();
-        String deliveryAddress = deliveryAddressPage.getDeliveryAddress();
-        
-        deliveryAddressLabel.setText("Delivery Address: " + deliveryAddress);
-        
+        totalPriceLabel.setText("Total Price: P " + totalPrice); 
     }
     
     /**
@@ -57,7 +51,6 @@ public class ConfirmationPage extends javax.swing.JFrame {
         thankYouLabel = new javax.swing.JLabel();
         productsPurchasedLabel = new javax.swing.JLabel();
         totalPriceLabel = new javax.swing.JLabel();
-        deliveryAddressLabel = new javax.swing.JLabel();
         purchaseConfirmedLabel1 = new javax.swing.JLabel();
         returnButton = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
@@ -69,7 +62,6 @@ public class ConfirmationPage extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(950, 550));
 
         thankYouLabel.setFont(new java.awt.Font("Serif", 0, 18)); // NOI18N
         thankYouLabel.setText("Thank you for purchasing at Pandelitos!");
@@ -80,9 +72,6 @@ public class ConfirmationPage extends javax.swing.JFrame {
 
         totalPriceLabel.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
         totalPriceLabel.setText("Total price:");
-
-        deliveryAddressLabel.setFont(new java.awt.Font("Serif", 0, 12)); // NOI18N
-        deliveryAddressLabel.setText("Delivery address:");
 
         purchaseConfirmedLabel1.setFont(new java.awt.Font("Serif", 0, 18)); // NOI18N
         purchaseConfirmedLabel1.setText("Purchase confirmed!");
@@ -166,22 +155,21 @@ public class ConfirmationPage extends javax.swing.JFrame {
                 .addGap(162, 162, 162)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(productsPurchasedLabel)
-                    .addComponent(deliveryAddressLabel)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 619, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(104, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 304, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(purchaseConfirmedLabel1)
                         .addGap(364, 364, 364))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(thankYouLabel)
-                        .addGap(154, 154, 154)
+                        .addGap(157, 157, 157)
                         .addComponent(returnButton)
                         .addGap(52, 52, 52))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(661, Short.MAX_VALUE)
                 .addComponent(totalPriceLabel)
                 .addGap(171, 171, 171))
         );
@@ -197,16 +185,15 @@ public class ConfirmationPage extends javax.swing.JFrame {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(totalPriceLabel)
-                .addGap(4, 4, 4)
-                .addComponent(deliveryAddressLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(thankYouLabel)
-                        .addGap(70, 70, 70))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                         .addComponent(returnButton)
-                        .addGap(51, 51, 51))))
+                        .addGap(51, 51, 51))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(thankYouLabel)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         pack();
@@ -258,7 +245,6 @@ public class ConfirmationPage extends javax.swing.JFrame {
     private javax.swing.JButton Pandelitos;
     private javax.swing.JButton Pandelitos1;
     private javax.swing.JTable TableProductsInCart;
-    private javax.swing.JLabel deliveryAddressLabel;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel productsPurchasedLabel;
